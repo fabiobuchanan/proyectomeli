@@ -22,6 +22,20 @@ body {
     grid-template-columns: 1fr;
 }
 
+@media screen and (min-width: 576px) {
+    #grid-body {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "titulo"
+        "productos"
+        "titulo2"
+        "acerca-denosotros"
+        "footer";
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (min-width: 768px) {
     #grid-body {
         grid-template-areas: 
@@ -82,6 +96,14 @@ body {
     background-size: cover;
     position: relative;
     gap: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+    #contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -270,14 +292,19 @@ li:hover {
 @media screen and (min-width: 1024px) {
     .iconos {
         display: grid;
-        grid-template-columns: 55%;
+        grid-template-columns: repeat(2, 55%);
         grid-template-rows: repeat(3, 100px);
         grid-template-areas: 
         "iconos1 iconos2"
         "iconos3 iconos4"
         "iconos5 iconos5";
         row-gap: 6rem;
+        column-gap: 8rem;
         margin-bottom: 9rem;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
     }
 
     .iconos__contenido5 {
@@ -546,29 +573,36 @@ footer img {
 /* PÁGINA "CURSOS" ---------------------------------------------------------------------------------------*/
 
     #grid {
-        height: 1500px;
+        height: 2500px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 300px;
+        margin-top: 250px;
         margin-bottom: 17rem;
-        gap: 4rem;
+        gap: 8rem;
     }
 
     .grid__productos {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3.5rem;
+        gap: 6rem;
     }
 
     .box {
         display: flex;
-        border-radius: 5px;
         flex-direction: column;
         align-items: center;
-        margin: 10px;
+        margin-top: 10px;
+        background-color:#23074d;
+        color: #fff;
+        border: solid #23074d 20px;
+        border-radius: 20px;
+        padding: 20px;
+        font-size: 150%;
+        text-align: center;
+        gap: 1rem;
     }
     
     .box img {
@@ -593,7 +627,6 @@ footer img {
         gap: 2rem;
     }
 
-
 @media screen and (min-width: 768px) {
     #grid {
         height: 1000px;
@@ -608,17 +641,19 @@ footer img {
     .grid__productos {
         display: grid;
         grid-template-columns: 300px 300px 300px;
-        grid-gap: 45px;
+        grid-gap: 100px;
         color: #444;
         justify-content: center;
         margin: 5rem 5rem;
     }
   
     .box {
-        background-color:#23074d;
+        background-color: #290561;
+        background: radial-gradient(circle, #290561 40%, white);
         color: #fff;
-        border-radius: 20px;
-        padding: 20px;
+        border-radius: 50%;
+        border: #23074d;
+        padding: 15px;
         font-size: 150%;
         align-content: center;
         text-align: center;
