@@ -6,7 +6,10 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
     max-width: 100%;
+    font-size: 62.5%;
 }
 
 
@@ -95,7 +98,7 @@ body {
     background-position: center;
     background-size: cover;
     position: relative;
-    gap: 2rem;
+    font-size: 1.1rem;
 }
 
 @media screen and (min-width: 576px) {
@@ -190,6 +193,7 @@ li:hover {
     flex-direction: column;
     gap: 2rem;
     padding-bottom: 1rem;
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -278,6 +282,7 @@ li:hover {
     font-size: larger;
     margin-bottom: 3rem;
     gap: 3rem;
+    font-size: 1.3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -374,13 +379,25 @@ li:hover {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+    margin-top: 3rem;
     margin-bottom: 6rem;
+    font-size: 1.3rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    background: #457fca;  
+    background: -webkit-linear-gradient(to right, #5691c8, #457fca);  
+    background: linear-gradient(to right, #5691c8, #457fca); 
+    height: 800px;
 }
 
 .acerca-denosotros__texto {
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.acerca-denosotros__titulo {
+    text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -390,11 +407,12 @@ li:hover {
         "titulo3 titulo3"
         "texto3 video3" ;
         grid-template-columns: 30%;
-        grid-template-rows: 2fr;
+        grid-template-rows: 50px 300px;
         column-gap: 4rem;
         row-gap: 4rem ;
         justify-content: center;
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
+        height: 600px ;
     }
 
     .acerca-denosotros__titulo {
@@ -425,11 +443,9 @@ footer {
     background: -webkit-linear-gradient(#fff, #23074d);  
     background: linear-gradient(#fff, #23074d); 
     padding-top: 2rem;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
 }
 
 footer img {
@@ -447,6 +463,12 @@ footer img {
     text-align: center;
 }
 
+.footer h4, h5 {
+    font-size: 1rem;
+    font-weight:bold;
+}
+
+/*
 .youtube {
     height: 32px;
     width: 32px;
@@ -457,7 +479,7 @@ footer img {
     flex-direction: row;
     justify-content: space-around;
     gap: 2rem;
-}
+}*/
 
 
 .parrafo p {
@@ -467,6 +489,7 @@ footer img {
     border-image-width: 2rem;
     border-radius: 6px;
     color: #fff;
+    font-size: 1.2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -482,12 +505,15 @@ footer img {
 
 }
 
+/* ICONOS REDES EN FOOTER */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .wrapper {
   display: inline-flex;
   list-style: none;
+  padding-left: 0;
+  gap: 5px;
 }
 
 .wrapper .icon {
@@ -495,7 +521,7 @@ footer img {
   background: #ffffff;
   border-radius: 50%;
   padding-left: 12px;
-  margin: 10px;
+
   width: 50px;
   height: 50px;
   font-size: 18px;
@@ -591,6 +617,7 @@ footer img {
     gap: 1.5rem;
     padding-bottom: 1.5rem;
     max-width: 100%;
+    height: 100%;
     margin: 4rem 4rem;
 }
 
@@ -642,6 +669,7 @@ footer img {
     align-items: center;
     justify-content: center;
     gap: .5rem;
+    font-size: 1rem;
 }
 
 
@@ -650,6 +678,7 @@ footer img {
     flex-direction: column;
     align-items: center;
     gap: .5rem;
+    font-size: 1.3rem;
 }
 
 .clases__video-texto p {
@@ -666,14 +695,23 @@ footer img {
 
 /* PÁGINA "CURSOS" ---------------------------------------------------------------------------------------*/
 
+    #cursos {
+        background-image: url(../img/landscape2.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        height: 2000px;
+    }
+
     #grid {
-        height: 2500px;
+        height: 100%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 250px;
-        margin-bottom: 17rem;
+        margin-top: 20px;
+        margin-bottom: 10rem;
         gap: 8rem;
     }
 
@@ -692,7 +730,7 @@ footer img {
         background-color:#23074d;
         color: #fff;
         border: solid #23074d 20px;
-        border-radius: 20px;
+        border-radius: 12px;
         padding: 20px;
         font-size: 150%;
         text-align: center;
@@ -719,17 +757,58 @@ footer img {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+        color: white;
     }
 
-@media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
+        #grid {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        .grid__productos {
+            display: grid;
+            grid-template-columns: 300px 300px;
+            grid-gap: 100px;
+            color: #444;
+            justify-content: center;
+        }
+      
+        .box {
+            background-color: #979797;
+            color: #fff;
+            border: #23074d;
+            padding: 15px;
+            font-size: 150%;
+            align-content: center;
+            text-align: center;
+            gap: 1rem;
+        }
+    
+        .grid__productos div {
+            justify-content: center;
+        }
+    
+        .grid__productos img {
+            height: 200px;
+            width: 150px;
+            border-radius: 15px;
+        }
+    }
+    
+
+@media screen and (min-width: 1024px) {
     #grid {
-        height: 1000px;
+        height: 100%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 45px;
-        margin-bottom: 3rem;
     }
 
     .grid__productos {
@@ -738,14 +817,11 @@ footer img {
         grid-gap: 100px;
         color: #444;
         justify-content: center;
-        margin: 5rem 5rem;
     }
   
     .box {
-        background-color: #290561;
-        background: radial-gradient(circle, #290561 40%, white);
-        color: #fff;
-        border-radius: 50%;
+        background-color: #fff;
+        color: black;
         border: #23074d;
         padding: 15px;
         font-size: 150%;
@@ -810,6 +886,7 @@ footer img {
     padding-left: 1rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    font-size: 1.3rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -856,12 +933,27 @@ label {
 }
 
 .formulario__titulo {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: .5em;
 }
 
 .formulario__texto {
     font-weight: 300;
+    font-size: 1rem;
+}
+
+.formulario p, a, legend {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.formulario__cajas label {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.formulario label {
+    font-size: 1rem;
 }
 
 input {
