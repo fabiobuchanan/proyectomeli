@@ -158,7 +158,6 @@ li:hover {
     position: absolute;
     bottom: 0;
     width: 100%;
-    
 }
 
 .titulo {
@@ -440,12 +439,14 @@ li:hover {
 /* FOOTER ---------------------------------------------------------------------------------------------------*/
 
 footer {
-    background: -webkit-linear-gradient(#fff, #23074d);  
-    background: linear-gradient(#fff, #23074d); 
+    background: -webkit-linear-gradient(#fff, #23074d4f);  
+    background: linear-gradient(#fff, #23074d50); 
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;   
 }
 
 footer img {
@@ -468,19 +469,6 @@ footer img {
     font-weight:bold;
 }
 
-/*
-.youtube {
-    height: 32px;
-    width: 32px;
-}
-
-.icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 2rem;
-}*/
-
 
 .parrafo p {
     padding: 2px;
@@ -488,21 +476,29 @@ footer img {
     border-width: 6px;
     border-image-width: 2rem;
     border-radius: 6px;
-    color: #fff;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
     #footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #footer {
+        display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 4rem;
         justify-content: space-evenly;
         padding-bottom: 1.5rem;
         padding-left: 4px;
         padding-right: 4px;
     }
-
 }
 
 /* ICONOS REDES EN FOOTER */
@@ -616,9 +612,8 @@ footer img {
     align-items: center;
     gap: 1.5rem;
     padding-bottom: 1.5rem;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
-    margin: 4rem 4rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -642,9 +637,7 @@ footer img {
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
         justify-content: center;
-        
         }
-            
     }
 
 #clases {
@@ -695,11 +688,79 @@ footer img {
 
 /* PÁGINA "CURSOS" ---------------------------------------------------------------------------------------*/
 
+    .pre-grid-titulos {
+        height: 350px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pre-grid-titulos:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        background: white;
+        background-position: 50% o;
+        background-size: cover;
+    }
+
+    .pre-grid-titulos1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 1.5rem;
+        gap: 4rem;
+    }
+
+    #pre-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        height: 1350px;
+        width: 100%;
+        padding-top: 1.5rem;
+        background-image: url(../img/MeliYoga3.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 3px 5px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 300px;
+        width: 250px;
+        background-color: rgb(81, 81, 248);
+        border-radius: 5px;
+        box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+        gap: 2rem;
+    }
+
+    .boxes img {
+        height: 50px;
+        width: 50px;
+    }
+
     #cursos {
         background-image: url(../img/landscape2.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+        background-size: cover;
         height: 2000px;
     }
 
@@ -710,8 +771,8 @@ footer img {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 20px;
-        margin-bottom: 10rem;
+        margin-top: 40rem;
+        margin-bottom: 40rem;
         gap: 8rem;
     }
 
@@ -722,14 +783,18 @@ footer img {
         gap: 6rem;
     }
 
+    .grid__productos h3 {
+        font-weight: bold;
+    }
+
     .box {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 350px;
+        width: 300px;
+        background: linear-gradient(315deg, #ffffff, #d7e1ec);
         margin-top: 10px;
-        background-color:#23074d;
-        color: #fff;
-        border: solid #23074d 20px;
         border-radius: 12px;
         padding: 20px;
         font-size: 150%;
@@ -742,6 +807,7 @@ footer img {
         width: 150px;
         border-radius: 15px;
         margin-bottom: 1rem;
+        box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
     }
 
     .grid__textos h1 {
@@ -760,11 +826,24 @@ footer img {
         color: white;
     }
 
+
     @media screen and (min-width: 768px) {
+       #pre-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 800px;
+        width: 100%;
+        gap: 5rem;
+       }
+       
+        #cursos {
+            height: 1000px;
+        }
+        
         #grid {
-            height: 100%;
-            width: 100%;
-            display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -780,8 +859,6 @@ footer img {
       
         .box {
             background-color: #979797;
-            color: #fff;
-            border: #23074d;
             padding: 15px;
             font-size: 150%;
             align-content: center;
@@ -798,10 +875,25 @@ footer img {
             width: 150px;
             border-radius: 15px;
         }
+
+        .grid__productos h3 {
+            font-weight: bold;
+        }
+    
     }
     
 
 @media screen and (min-width: 1024px) {
+    #pre-grid {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        height: 600px;
+        width: 100%;
+        gap: 5rem;
+       }
+
     #grid {
         height: 100%;
         width: 100%;
@@ -838,7 +930,7 @@ footer img {
         height: 200px;
         width: 150px;
         border-radius: 15px;
-    }
+    }    
 }
 
 .imagen1, .imagen2, .imagen3, .imagen4, .imagen5, .imagen6 {
@@ -887,6 +979,10 @@ footer img {
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-size: 1.3rem;
+}
+
+.bio-texto {
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
