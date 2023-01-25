@@ -60,26 +60,27 @@
                 <p class="formulario_texto">¿No tenés una cuenta? <a href="#" class="formulario__link">Regístrate</a></p>
                     <legend>Ingresá tus datos:</legend>
                     <div class="formulario__cajas">
-                        <label for="nombre-apellido">Nombre y Apellido</label>
+                        <label for="nombre-apellido" class="text">Nombre y Apellido</label>
                         <input type="text" id="nombre-apellido" placeholder="Ingresá acá tu nombre y apellido" required>
                     </div>
 
                     <div class="formulario__cajas"> 
-                        <label for="correo">Email</label>
+                        <label for="correo" class="text">Email</label>
                         <input type="email" id="correo" placeholder="Ingresá acá tu email" required>
                     </div>
                 
                     <div class="formulario__cajas">  
-                        <label for="telefono">Teléfono</label>
+                        <label for="telefono" class="text">Teléfono</label>
                         <input type="tel" id="telefono" placeholder="Ingresá tu teléfono" required>
                     </div>
+                    <div class="comentarios-btns">
+                        <label for="comentarios" class="text">Comentarios</label>
+                        <textarea id="comentarios" placeholder="Dejanos un comentario"></textarea>
 
-                    <label for="comentarios">Comentarios</label>
-                    <textarea id="comentarios" placeholder="Dejanos un comentario"></textarea>
+                        <input type="submit" value="Enviar"> 
 
-                    <input type="submit" value="Enviar"> 
-
-                    <input type="reset" value="Limpiar formulario">
+                        <input type="reset" value="Limpiar formulario">
+                    </div>  
         </form>
     </section>
 

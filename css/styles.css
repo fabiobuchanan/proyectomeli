@@ -88,9 +88,7 @@ body {
     height: 350px;
     background: url(../img/meli1.jpg);
     background: #23074d; 
-    /*background: -webkit-linear-gradient(to right, #cc54339a, #23074d93), url(../img/meli1.jpg);  
-    background: linear-gradient(to right, #cc5433a1, #23074d7c), url(../img/meli1.jpg); */
-    background: #c31432;  /* fallback for old browsers */
+    background: #c31432;  
     background: -webkit-linear-gradient(to right,#c31431af, #240b3675), url(../img/meli1.jpg);  
     background: linear-gradient(to right,#c3143183, #240b36ab), url(../img/meli1.jpg); 
     background-repeat: no-repeat;
@@ -103,10 +101,10 @@ body {
 
 @media screen and (min-width: 576px) {
     #contenedor {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -685,6 +683,7 @@ footer img {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .pre-grid-titulos:before {
@@ -734,7 +733,7 @@ footer img {
         text-align: center;
         height: 300px;
         width: 250px;
-        background-color: rgb(81, 81, 248);
+        background-color:#3066BE;
         border-radius: 5px;
         box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
         gap: 2rem;
@@ -797,7 +796,6 @@ footer img {
         width: 150px;
         border-radius: 15px;
         margin-bottom: 1rem;
-        box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
     }
 
     .grid__textos h1 {
@@ -869,10 +867,9 @@ footer img {
         .grid__productos h3 {
             font-weight: bold;
         }
-    
     }
-    
 
+    
 @media screen and (min-width: 1024px) {
     #pre-grid {
         flex-direction: row;
@@ -896,7 +893,7 @@ footer img {
     .grid__productos {
         display: grid;
         grid-template-columns: 300px 300px 300px;
-        grid-gap: 100px;
+        column-gap: auto;
         color: #444;
         justify-content: center;
     }
@@ -935,26 +932,32 @@ footer img {
 
 .imagen1:hover {
     transform: scale(1.5);
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .imagen2:hover {
     transform: scale(1.5);
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .imagen3:hover {
     transform: scale(1.5);
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .imagen4:hover {
     transform: scale(1.5);
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .imagen5:hover {
     transform: scale(1.5);
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .imagen6:hover {
     transform: scale(1.5);
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* PÁGINA "BIO" ---------------------------------------------------------------------------------------------------*/ 
@@ -1048,4 +1051,18 @@ label {
 
 input {
     border-radius: 3px;
+    box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.2);
 }
+
+.text {
+    font-size: 1.4rem;
+    font-family:sans-serif;
+}
+
+.comentarios-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
