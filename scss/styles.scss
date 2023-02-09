@@ -1,0 +1,291 @@
+@import "index.scss";
+@import "bio.scss";
+@import "variables.scss";
+@import "global.scss";
+@import "clases.scss";
+@import "cursos.scss";
+@import "contacto.scss";
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    font-size: 62.5%;
+}
+
+
+/* HEADER ---------------------------------------------------------------------------------------------------*/
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    background: url(../img/meli1.jpg);
+    background: #23074d; 
+    background: #c31432;  
+    background: -webkit-linear-gradient(to right,#c31431af, #240b3675), url(../img/meli1.jpg);  
+    background: linear-gradient(to right,#c3143183, #240b36ab), url(../img/meli1.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+@media screen and (min-width: 576px) {
+    #contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media screen and (min-width: 768px) {
+    #contenedor {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        height: 320px;
+    }
+
+    .menu .logo {
+        padding: 1rem;
+    }
+
+    .menu {
+        align-self: stretch;
+    }
+
+    .logo img {
+       margin-bottom: 70px;
+    }
+}
+
+.menu {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu__ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    justify-content: right;
+    margin-right: 50px;
+    margin-top: 0;
+}
+
+.menu__ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 450;
+    font-size: larger;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+#wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.titulo {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Rowdies', cursive;
+    font-size: larger;
+    justify-content: center;
+}
+
+
+.titulo h1 h2 {
+    align-items: center;
+}
+
+
+/*LOGO ---------------------------------------------------------------------------------------------------*/
+
+.logo img {
+    height: 150px;
+    width: 150px;
+}
+
+/* FOOTER ---------------------------------------------------------------------------------------------------*/
+
+footer {
+    background: -webkit-linear-gradient(#fff, #23074d4f);  
+    background: linear-gradient(#fff, #23074d50); 
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;   
+}
+
+footer img {
+    height: 25px;
+    width: 25px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer2 {
+    text-align: center;
+}
+
+.footer h4, h5 {
+    font-size: 1rem;
+    font-weight:bold;
+}
+
+
+.parrafo p {
+    padding: 2px;
+    border: 1rem 1rem 1rem 1rem;
+    border-width: 6px;
+    border-image-width: 2rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    #footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 1.5rem;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+
+/* ICONOS REDES EN FOOTER */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  padding-left: 0;
+  gap: 5px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding-left: 12px;
+
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
+

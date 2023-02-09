@@ -1,0 +1,530 @@
+@import "global.scss";
+@import "variables.scss";
+
+.pre-grid-titulos {
+    @include flex-column-centrado;
+    height: 350px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.pre-grid-titulos:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: white;
+    background-position: 50% o;
+    background-size: cover;
+}
+
+.pre-grid-titulos1 {
+    @include flex-column-centrado;
+    position: relative;
+    text-align: center;
+    margin-top: 1.5rem;
+    gap: 4rem;
+}
+
+#pre-grid {
+    @include flex-column-centrado;
+    gap: 2rem;
+    height: 1350px;
+    width: 100%;
+    padding-top: 1.5rem;
+    background-image: url(../img/MeliYoga3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 3px 5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.boxes {
+    @include flex-column-centrado;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+    width: 250px;
+    background-color:#3066BE;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+    gap: 2rem;
+}
+
+.boxes img {
+    height: 50px;
+    width: 50px;
+}
+
+#cursos {
+    background-image: url(../img/landscape2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 2000px;
+}
+
+#grid {
+    @include flex-column-centrado;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    margin-top: 40rem;
+    margin-bottom: 40rem;
+    gap: 8rem;
+}
+
+.grid__productos {
+    @include flex-column-centrado;
+    gap: 6rem;
+}
+
+.grid__productos h3 {
+    font-weight: bold;
+}
+
+.box {
+    @include flex-column-centrado;
+    height: 350px;
+    width: 300px;
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+    margin-top: 10px;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 150%;
+    text-align: center;
+    gap: 1rem;
+}
+
+.box img {
+    height: 200px;
+    width: 150px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.grid__textos h1 {
+    text-align: center;
+}
+
+.grid__textos h3 {
+    text-align: center;
+}
+
+.grid__textos {
+    @include flex-column-centrado;
+    gap: 2rem;
+    color: white;
+}
+
+
+@media screen and (min-width: 768px) {
+   #pre-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    width: 100%;
+    gap: 5rem;
+   }
+   
+    #cursos {
+        height: 1000px;
+    }
+    
+    #grid {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .grid__productos {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 100px;
+        color: #444;
+        justify-content: center;
+    }
+  
+    .box {
+        background-color: #979797;
+        padding: 15px;
+        font-size: 150%;
+        align-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .grid__productos div {
+        justify-content: center;
+    }
+
+    .grid__productos img {
+        height: 200px;
+        width: 150px;
+        border-radius: 15px;
+    }
+
+    .grid__productos h3 {
+        font-weight: bold;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+#pre-grid {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 600px;
+    width: 100%;
+    gap: 5rem;
+   }
+
+#grid {
+    @include flex-column-centrado;
+    height: 100%;
+    width: 100%;
+    justify-content: center;  
+}
+
+.grid__productos {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    column-gap: auto;
+    color: #444;
+    justify-content: center;
+}
+
+.box {
+    background-color: #fff;
+    color: black;
+    border: #23074d;
+    padding: 15px;
+    font-size: 150%;
+    align-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.grid__productos div {
+    justify-content: center;
+}
+
+.grid__productos img {
+    height: 200px;
+    width: 150px;
+    border-radius: 15px;
+}    
+}
+
+.imagen1, .imagen2, .imagen3, .imagen4, .imagen5, .imagen6 {
+top: -50px;
+left: -35px;
+z-index: 999;
+cursor: pointer;
+transition-property: all;
+transition-duration: 0.3s;
+transition-timing-function: ease;
+}
+
+.imagen1:hover {
+transform: scale(1.5);
+box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.imagen2:hover {
+transform: scale(1.5);
+box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.imagen3:hover {
+transform: scale(1.5);
+box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.imagen4:hover {
+transform: scale(1.5);
+box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.imagen5:hover {
+transform: scale(1.5);
+box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.imagen6:hover {
+transform: scale(1.5);
+box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+  /* MENU HAMBURGUESA */
+
+  #main-header {
+    height: 150px;
+  }
+
+  .main-header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #23074d; 
+    background: #c31432;  
+    background: -webkit-linear-gradient(to right,#c3143165, #240b3669), url(../img/meli1.jpg);  
+    background: linear-gradient(to right,#c3143157, #240b367c), url(../img/meli1.jpg); 
+    padding: 0 0.4rem;
+  }
+  
+
+  .main-logo {
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+
+    img {
+        padding-left: 1rem;
+        height: 120px;
+        width: 250px;
+      }
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .main-nav.show {
+    margin-left: 0;
+  }
+
+  .nav-links {
+    background-color: #ffffff;
+    background: -webkit-linear-gradient(to right,#c31431af, #240b3675), url(../img/meli1.jpg);  
+    background: linear-gradient(to right,#c3143183, #240b36ab), url(../img/meli1.jpg); 
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3.5rem;
+
+    a{
+      color: #ffffff;
+    }
+  }
+
+  .link-item:first-child {
+    margin-bottom: 2rem;
+  }
+
+  .link-item {
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+
+  .button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column; /* Pondrá un span debajo del otro*/
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* 
+    Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+  */
+  
+  .button-menu span {
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #444444;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+  
+  /* 
+    con los span dibujamos un icono de cerrar 
+    para mostrar cuándo la navegación este abierta 
+  */
+  
+  .button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ffffff;
+  }
+  
+  .button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  
+  .button-menu.close span:nth-child(3) {
+    display: none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 0.4rem;
+  }
+  
+  .main-logo {
+    color: black;
+    font-size: 32px;
+    text-decoration: none;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+  }
+  
+  .main-nav.show {
+    margin-left: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .link-item {
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .link-item::after {
+    position: absolute;
+    content: "";
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s ease all;
+  }
+  
+  .link-item:hover::after {
+    width: 100%;
+  }
+  
+  .button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .button-menu span {
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+  
+  .button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ffffff;
+  }
+  
+  .button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  
+  .button-menu.close span:nth-child(3) {
+    display: none;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .button-menu {
+      display: none;
+    }
+  
+    .main-logo {
+      flex-basis: 30%;
+    }
+  
+    .main-nav {
+      position: static;
+      margin-left: 0;
+      flex-basis: 70%;
+      height: 100%;
+    }
+  
+    .nav-links {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      background: white;
+    }
+  
+    .link-item {
+      display: inline-block;
+      margin-top: 0;
+      margin-right: 2rem;
+    }
+  }

@@ -1,0 +1,321 @@
+@import "global.scss";
+@import "variables.scss";
+
+#clases {
+    @include flex-column-centrado;
+    gap: 1.5rem;
+    padding-bottom: 6rem;
+    margin-top: 70px;
+    width: 100%;
+    height: 100%;
+
+    .clases__video {
+        @include flex-column-centrado;
+        margin-top: 30px;
+        gap: 1rem;
+
+        iframe {
+            height: 300px;
+            width: 450px;
+            border-radius: 10px;
+        }
+
+        .clases__video-caja1, .clases__video-caja2, .clases__video-caja3, .clases__video-caja4 {
+            @include flex-column-centrado;
+            justify-content: center;
+            gap: .5rem;
+            font-size: 1rem;
+        }
+
+        .clases__video-texto {
+            @include flex-column-centrado;
+            gap: .5rem;
+            font-size: 1.3rem;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .clases__video-caja1 h2, .clases__video-caja2 h2, .clases__video-caja3 h2, .clases__video-caja4 h2 {
+            border: solid 2px;
+            border-radius: 8px;
+            background-color: #23074d;
+            color: #fff;
+            padding: 5px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    #clases {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 4rem;
+        column-gap: 4rem;
+        justify-content: center;
+        }
+    }
+
+
+    /* MENU HAMBURGUESA */
+
+#main-header {
+    height: 110px;
+  }
+
+  .main-header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #23074d; 
+    background: #c31432;  
+    background: -webkit-linear-gradient(to right,#c3143165, #240b3669), url(../img/meli1.jpg);  
+    background: linear-gradient(to right,#c3143157, #240b367c), url(../img/meli1.jpg); 
+    padding: 0 0.4rem;
+  }
+  
+
+  .main-logo {
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+
+    img {
+        padding-left: 1rem;
+        height: 120px;
+        width: 250px;
+      }
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .main-nav.show {
+    margin-left: 0;
+  }
+
+  .nav-links {
+    background-color: #ffffff;
+    background: -webkit-linear-gradient(to right,#c31431af, #240b3675), url(../img/meli1.jpg);  
+    background: linear-gradient(to right,#c3143183, #240b36ab), url(../img/meli1.jpg); 
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3.5rem;
+
+    a{
+      color: #ffffff;
+    }
+  }
+
+  .link-item:first-child {
+    margin-bottom: 2rem;
+  }
+
+  .link-item {
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+
+  .button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column; /* Pondrá un span debajo del otro*/
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* 
+    Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+  */
+  
+  .button-menu span {
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #444444;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+  
+  /* 
+    con los span dibujamos un icono de cerrar 
+    para mostrar cuándo la navegación este abierta 
+  */
+  
+  .button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ffffff;
+  }
+  
+  .button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  
+  .button-menu.close span:nth-child(3) {
+    display: none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 0.4rem;
+  }
+  
+  .main-logo {
+    color: black;
+    font-size: 32px;
+    text-decoration: none;
+  }
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+  }
+  
+  .main-nav.show {
+    margin-left: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .link-item {
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .link-item::after {
+    position: absolute;
+    content: "";
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s ease all;
+  }
+  
+  .link-item:hover::after {
+    width: 100%;
+  }
+  
+  .button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .button-menu span {
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+  
+  .button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ffffff;
+  }
+  
+  .button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  
+  .button-menu.close span:nth-child(3) {
+    display: none;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .button-menu {
+      display: none;
+    }
+  
+    .main-logo {
+      flex-basis: 30%;
+    }
+  
+    .main-nav {
+      position: static;
+      margin-left: 0;
+      flex-basis: 70%;
+      height: 100%;
+    }
+  
+    .nav-links {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      background: white;
+    }
+  
+    .link-item {
+      display: inline-block;
+      margin-top: 0;
+      margin-right: 2rem;
+    }
+  }
