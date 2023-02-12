@@ -1,6 +1,7 @@
 @import "global.scss";
 @import "variables.scss";
 
+
 .pre-grid-titulos {
     @include flex-column-centrado;
     height: 350px;
@@ -102,12 +103,21 @@
     gap: 1rem;
 }
 
-.box img {
-    height: 200px;
-    width: 150px;
-    border-radius: 15px;
-    margin-bottom: 1rem;
+.box  {
+    img {
+      height: 200px;
+      width: 150px;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      padding: .5rem;
+      border-radius: 5px;
+      background-color: $terciaryIndex;
+    }
 }
+
 
 .grid__textos h1 {
     text-align: center;
@@ -155,7 +165,6 @@
     }
   
     .box {
-        background-color: #979797;
         padding: 15px;
         font-size: 150%;
         align-content: center;
@@ -206,7 +215,6 @@
 }
 
 .box {
-    background-color: #fff;
     color: black;
     border: #23074d;
     padding: 15px;
@@ -226,6 +234,7 @@
     border-radius: 15px;
 }    
 }
+
 
 .imagen1, .imagen2, .imagen3, .imagen4, .imagen5, .imagen6 {
 top: -50px;
@@ -265,8 +274,7 @@ box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
 .imagen6:hover {
 transform: scale(1.5);
 box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
+} 
 
 
   /* MENU HAMBURGUESA */

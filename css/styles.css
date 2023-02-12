@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 #grid-body {
+  height: 100vh; }
+
+#grid-body {
   display: grid;
   grid-template-areas: "header" "titulo" "productos" "titulo2" "acerca-denosotros" "footer";
   grid-template-columns: 1fr; }
@@ -57,7 +60,7 @@
   height: 100%;
   margin-top: 2rem;
   gap: 2rem;
-  margin-bottom: 25rem;
+  margin-bottom: 10rem;
   font-size: 1rem; }
   #productos .imagen {
     display: flex;
@@ -94,6 +97,17 @@
       text-align: center;
       font-weight: 500; }
 
+@media screen and (max-width: 576px) {
+  #productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    margin-top: 2rem;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    font-size: 1rem; } }
+
 @media screen and (min-width: 768px) {
   #productos {
     display: grid;
@@ -105,6 +119,120 @@
     justify-items: center;
     align-content: space-evenly;
     align-items: center; } }
+
+/* CARROUSEL IMÁGENES -----------------------------------------------------------------------------------------*/
+@media screen and (max-width: 576px) {
+  #carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1500px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    justify-content: center; }
+  .carousel-item {
+    height: 338px;
+    width: 500px; } }
+
+@media screen and (min-width: 577px) {
+  #carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1300px;
+    margin-top: 0;
+    margin-bottom: 5rem; }
+  .carousel {
+    margin-bottom: 8rem; }
+  .carousel-item {
+    height: 506px;
+    width: 750px;
+    margin: 2px 2px 2px 2px; }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black; }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center; }
+    .carousel-caption h5 {
+      font-size: 25px; }
+    .carousel-caption p {
+      font-size: 10px; }
+  .carousel-control-prev {
+    justify-content: start; }
+  .carousel-control-next {
+    justify-content: end; } }
+
+@media screen and (min-width: 678px) {
+  #carousel {
+    height: 1000px;
+    margin-bottom: 1rem; }
+  .carousel {
+    margin-bottom: 8rem; }
+  .carousel-item {
+    height: 506px;
+    width: 750px;
+    margin: 2px 2px 2px 2px; }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black; }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center; }
+    .carousel-caption h5 {
+      font-size: 25px; }
+    .carousel-caption p {
+      font-size: 10px; }
+  .carousel-control-prev {
+    justify-content: start; }
+  .carousel-control-next {
+    justify-content: end; } }
+
+@media screen and (min-width: 768px) {
+  #carousel {
+    height: 800px;
+    margin-bottom: 1rem; }
+  .carousel {
+    margin-bottom: 8rem; }
+  .carousel-item {
+    height: 506px;
+    width: 750px;
+    margin: 2px 2px 2px 2px; }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black; }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center; }
+    .carousel-caption h5 {
+      font-size: 25px; }
+    .carousel-caption p {
+      font-size: 10px; }
+  .carousel-control-prev {
+    justify-content: start; }
+  .carousel-control-next {
+    justify-content: end; } }
+
+@media screen and (min-width: 992px) {
+  #carousel {
+    height: 100%;
+    margin-bottom: 1rem; }
+  .carousel {
+    margin-bottom: 8rem; }
+  .carousel-item {
+    height: 750px;
+    width: 1000px;
+    margin-left: 4rem;
+    margin-right: 6rem; }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black; }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); }
+    .carousel-caption h5 {
+      font-size: 40px; }
+    .carousel-caption p {
+      font-size: 20px; }
+  .carousel-control-prev {
+    justify-content: start; }
+  .carousel-control-next {
+    justify-content: end; } }
 
 /* ICONOS  --------------------------------------------------------------------------------------------------*/
 .iconos {
@@ -131,7 +259,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 750px;
+  height: 100%;
   margin-top: 100px;
   justify-content: center;
   font-family: 'Rowdies', cursive;
@@ -192,6 +320,12 @@
   font-family: 'DM Sans', sans-serif; }
 
 /* ACERCA DE NOSOTROS ---------------------------------------------------------------------------------------*/
+@media screen and (max-width: 620px) {
+  .acerca-denosotros__video iframe {
+    height: 300px;
+    width: 450px;
+    border-radius: 10px; } }
+
 #acerca-denosotros {
   display: flex;
   flex-direction: column;
@@ -1111,6 +1245,11 @@
   border-radius: 15px;
   margin-bottom: 1rem; }
 
+.box h2 {
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: #457fca; }
+
 .grid__textos h1 {
   text-align: center; }
 
@@ -1147,7 +1286,6 @@
     color: #444;
     justify-content: center; }
   .box {
-    background-color: #979797;
     padding: 15px;
     font-size: 150%;
     align-content: center;
@@ -1185,7 +1323,6 @@
     color: #444;
     justify-content: center; }
   .box {
-    background-color: #fff;
     color: black;
     border: #23074d;
     padding: 15px;
@@ -1763,11 +1900,11 @@ body {
   align-items: center;
   width: 100%;
   height: 350px;
-  background: url(../img/meli1.jpg);
+  background: url(../img/meli1.webp);
   background: #23074d;
   background: #c31432;
-  background: -webkit-linear-gradient(to right, #c31431af, #240b3675), url(../img/meli1.jpg);
-  background: linear-gradient(to right, #c3143183, #240b36ab), url(../img/meli1.jpg);
+  background: -webkit-linear-gradient(to right, #c31431af, #240b3675), url(../img/meli1.webp);
+  background: linear-gradient(to right, #c3143183, #240b36ab), url(../img/meli1.webp);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

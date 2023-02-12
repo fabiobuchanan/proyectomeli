@@ -3,6 +3,10 @@
 
 
 #grid-body {
+  height: 100vh;
+}
+
+#grid-body {
     display: grid;
     grid-template-areas: 
     "header"
@@ -75,7 +79,7 @@
     height: 100%; 
     margin-top: 2rem;
     gap: 2rem;
-    margin-bottom: 25rem;
+    margin-bottom: 10rem;
     font-size: 1rem;
 
     .imagen {
@@ -128,6 +132,17 @@
     }
 }
 
+@media screen and (max-width: 576px) {
+  #productos { 
+    @include flex-column-centrado;
+    height: 1000px; 
+    margin-top: 2rem;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    font-size: 1rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
     #productos {
         display: grid;
@@ -142,6 +157,207 @@
     }
 }
 
+/* CARROUSEL IMÁGENES -----------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 576px) {
+
+   #carousel {
+    @include flex-column-centrado;
+    height: 1500px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    justify-content: center;
+   }
+
+
+  .carousel-item {
+    height: 338px;
+    width: 500px;
+  }
+
+}
+
+@media screen and (min-width: 577px) {
+
+  #carousel {
+    @include flex-column-centrado;
+    height: 1300px;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  .carousel {
+    margin-bottom: 8rem;
+  }
+  
+  .carousel-item {
+    height: 506px;
+    width: 750px;
+    margin: 2px 2px 2px 2px;
+  
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  
+    h5 {
+      font-size: 25px;
+    }
+  
+    p {
+      font-size: 10px;
+    };
+  }
+
+    .carousel-control-prev {
+      justify-content: start;
+  }
+
+  .carousel-control-next {
+      justify-content: end;
+  }
+
+}
+
+@media screen and (min-width: 678px) {
+
+  #carousel {
+    height: 1000px;
+    margin-bottom: 1rem;
+  }
+
+  .carousel {
+    margin-bottom: 8rem;
+  }
+  
+  .carousel-item {
+    height: 506px;
+    width: 750px;
+    margin: 2px 2px 2px 2px;
+  
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  
+    h5 {
+      font-size: 25px;
+    }
+  
+    p {
+      font-size: 10px;
+    };
+  }
+
+    .carousel-control-prev {
+      justify-content: start;
+  }
+
+  .carousel-control-next {
+      justify-content: end;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  #carousel {
+    height: 800px;
+    margin-bottom: 1rem;
+  }
+
+  .carousel {
+    margin-bottom: 8rem;
+  }
+  
+  .carousel-item {
+    height: 506px;
+    width: 750px;
+    margin: 2px 2px 2px 2px;
+  
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  
+    h5 {
+      font-size: 25px;
+    }
+  
+    p {
+      font-size: 10px;
+    };
+  }
+
+    .carousel-control-prev {
+      justify-content: start;
+  }
+
+  .carousel-control-next {
+      justify-content: end;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  #carousel {
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .carousel {
+    margin-bottom: 8rem;
+  }
+  
+  .carousel-item {
+    height: 750px;
+    width: 1000px;
+    margin-left: 4rem;
+    margin-right: 6rem;
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: black;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+  
+    h5 {
+      font-size: 40px;
+    }
+  
+    p {
+      font-size: 20px;
+    };
+  }
+
+  .carousel-control-prev {
+      justify-content: start;
+  }
+
+  .carousel-control-next {
+      justify-content: end;
+  }
+  
+}
 
 /* ICONOS  --------------------------------------------------------------------------------------------------*/
 
@@ -170,7 +386,7 @@
 
 .titulo2 {
     @include flex-column-centrado;
-    height: 750px;
+    height: 100%;
     margin-top: 100px;
     justify-content: center;
     font-family: 'Rowdies', cursive;
@@ -259,6 +475,14 @@
 
 /* ACERCA DE NOSOTROS ---------------------------------------------------------------------------------------*/
 
+
+@media screen and (max-width: 620px) {
+  .acerca-denosotros__video iframe {
+      height: 300px;
+      width: 450px;
+      border-radius: 10px;
+  }
+}
 
 #acerca-denosotros {
     @include flex-column-centrado;
