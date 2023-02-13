@@ -1,6 +1,9 @@
 @import "global.scss";
 @import "variables.scss";
 
+#cursos {
+  height: 100vh;
+}
 
 .pre-grid-titulos {
     @include flex-column-centrado;
@@ -35,14 +38,13 @@
 #pre-grid {
     @include flex-column-centrado;
     gap: 2rem;
-    height: 1350px;
+    height: 100%;
     width: 100%;
-    padding-top: 1.5rem;
     background-image: url(../img/MeliYoga3.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 3px 5px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 5px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .boxes {
@@ -76,8 +78,8 @@
     height: 100%;
     width: 100%;
     justify-content: center;
-    margin-top: 40rem;
-    margin-bottom: 40rem;
+    margin-top: 12rem;
+    margin-bottom: 20rem;
     gap: 8rem;
 }
 
@@ -101,9 +103,7 @@
     font-size: 150%;
     text-align: center;
     gap: 1rem;
-}
 
-.box  {
     img {
       height: 200px;
       width: 150px;
@@ -112,9 +112,16 @@
     }
 
     h2 {
-      padding: .5rem;
       border-radius: 5px;
-      background-color: $terciaryIndex;
+      background-color: rgba(66, 177, 51, 0.5);
+      width: 100%;
+      font-weight: 400;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    &:hover {
+      transform: scale(1.5);
+      box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -133,44 +140,91 @@
     color: white;
 }
 
+@media screen and (max-width: 576px) {
 
-@media screen and (min-width: 768px) {
-   #pre-grid {
+  #pre-grid {
+    height: 1200px;
+    padding: 10px;
+  }
+
+  #grid {
+    height: 2600px;
+    padding-top: 4rem;
+  }
+
+  .box {
+    color: black;
+    border: #23074d;
+    padding: 15px;
+    font-size: 150%;
+    align-content: center;
+    text-align: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #pre-grid {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: 800px;
+    height: 1500px;
     width: 100%;
     gap: 5rem;
    }
-   
-    #cursos {
-        height: 1000px;
-    }
     
     #grid {
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        @include flex-column-centrado;
+        height: 2500px;
+        padding-top: 2rem;
+    }
+
+    .grid__textos {
+      padding-top: 15px;
+      margin-bottom: 0 auto;
     }
 
     .grid__productos {
         display: grid;
-        grid-template-columns: 300px 300px;
-        grid-gap: 100px;
+        grid-template-columns: 300px;
+        grid-gap: 80px;
         color: #444;
         justify-content: center;
+        height: 100%;
+        padding-top: 0;
+        margin-bottom: 2rem;
     }
   
     .box {
-        padding: 15px;
-        font-size: 150%;
-        align-content: center;
-        text-align: center;
-        gap: 1rem;
-    }
+      color: black;
+      border: #23074d;
+      padding: 15px;
+      font-size: 150%;
+      align-content: center;
+      text-align: center;
+      gap: 1rem;
+      cursor: pointer;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+  
+  
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+      }
+  }
 
     .grid__productos div {
         justify-content: center;
@@ -188,6 +242,87 @@
 }
 
 
+@media screen and (min-width: 768px) {
+   #pre-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    width: 100%;
+    gap: 5rem;
+   }
+  
+    
+    #grid {
+        @include flex-column-centrado;
+        height: 100%;
+        margin-top: 3rem;
+        margin-bottom: 4.5rem;
+    }
+
+    .grid__productos {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 100px;
+        color: #444;
+        justify-content: center;
+        row-gap: 3rem;
+    }
+  
+    .box {
+      color: black;
+      border: #23074d;
+      padding: 15px;
+      font-size: 150%;
+      align-content: center;
+      text-align: center;
+      gap: 1rem;
+      cursor: pointer;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+  
+  
+      &:hover {
+        transform: scale(1.1); 
+        box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+      }
+  }
+
+    .grid__productos div {
+        justify-content: center;
+    }
+
+    .grid__productos img {
+        height: 200px;
+        width: 150px;
+        border-radius: 15px;
+    }
+
+    .grid__productos h3 {
+        font-weight: bold;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+
+  #grid {
+    gap: 1rem;
+    height: 2000px;
+  }
+
+  .grid__productos {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-gap: 80px;
+    justify-content: center;
+    height: 800px;
+}
+}
+
 @media screen and (min-width: 1024px) {
 #pre-grid {
     flex-direction: row;
@@ -201,9 +336,10 @@
 
 #grid {
     @include flex-column-centrado;
-    height: 100%;
+    height: 1200px;
     width: 100%;
     justify-content: center;  
+    gap: 3rem;
 }
 
 .grid__productos {
@@ -222,6 +358,16 @@
     align-content: center;
     text-align: center;
     gap: 1rem;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .grid__productos div {
@@ -235,46 +381,6 @@
 }    
 }
 
-
-.imagen1, .imagen2, .imagen3, .imagen4, .imagen5, .imagen6 {
-top: -50px;
-left: -35px;
-z-index: 999;
-cursor: pointer;
-transition-property: all;
-transition-duration: 0.3s;
-transition-timing-function: ease;
-}
-
-.imagen1:hover {
-transform: scale(1.5);
-box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.imagen2:hover {
-transform: scale(1.5);
-box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.imagen3:hover {
-transform: scale(1.5);
-box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.imagen4:hover {
-transform: scale(1.5);
-box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.imagen5:hover {
-transform: scale(1.5);
-box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.imagen6:hover {
-transform: scale(1.5);
-box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
-} 
 
 
   /* MENU HAMBURGUESA */
