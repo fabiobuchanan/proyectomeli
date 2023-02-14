@@ -47,6 +47,14 @@
     }
 }
 
+@media screen and (max-width: 360px) {
+ 
+    .clases__video > iframe {
+        height: 70px;
+        width: 150px;
+        border-radius: 10px;
+    }
+}
 
 @media screen and (min-width: 1024px) {
     #clases {

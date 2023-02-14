@@ -108,6 +108,16 @@ form {
     background-color: #45a049;
   }
 
+
+  @media screen and (max-width: 320px) {
+    .main-header > a > img {
+      height: 95px;
+      width: 180px;
+    }
+  }
+
+ 
+
 /* MENU HAMBURGUESA -------------------------------------------------------------------------------------------------*/
 
 #main-header {

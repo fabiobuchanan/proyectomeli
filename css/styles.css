@@ -125,28 +125,34 @@
 
 /* CARROUSEL IMÁGENES -----------------------------------------------------------------------------------------*/
 @media screen and (max-width: 576px) {
+  #productos {
+    height: 100%; }
   #carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1500px;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    height: 100%;
+    margin-top: 2rem;
+    padding-top: 2rem;
     justify-content: center; }
   .carousel-item {
     height: 338px;
-    width: 500px; } }
+    width: 500px; }
+  .titulo2 {
+    height: 100%; }
+  .iconos {
+    height: 700px; } }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 576px) {
   #carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1300px;
+    height: 100%;
     margin-top: 0;
     margin-bottom: 5rem; }
   .carousel {
-    margin-bottom: 8rem; }
+    margin-bottom: 1rem; }
   .carousel-item {
     height: 506px;
     width: 750px;
@@ -163,14 +169,13 @@
   .carousel-control-prev {
     justify-content: start; }
   .carousel-control-next {
-    justify-content: end; } }
+    justify-content: end; }
+  .iconos {
+    height: 600px; } }
 
 @media screen and (min-width: 678px) {
   #carousel {
-    height: 1000px;
-    margin-bottom: 1rem; }
-  .carousel {
-    margin-bottom: 8rem; }
+    height: 100%; }
   .carousel-item {
     height: 506px;
     width: 750px;
@@ -190,11 +195,11 @@
     justify-content: end; } }
 
 @media screen and (min-width: 768px) {
+  #productos {
+    padding-top: 4.5px; }
   #carousel {
-    height: 800px;
+    height: 100%;
     margin-bottom: 1rem; }
-  .carousel {
-    margin-bottom: 8rem; }
   .carousel-item {
     height: 506px;
     width: 750px;
@@ -217,8 +222,6 @@
   #carousel {
     height: 100%;
     margin-bottom: 1rem; }
-  .carousel {
-    margin-bottom: 8rem; }
   .carousel-item {
     height: 750px;
     width: 1000px;
@@ -914,6 +917,12 @@
       color: #fff;
       padding: 5px; }
 
+@media screen and (max-width: 360px) {
+  .clases__video > iframe {
+    height: 70px;
+    width: 150px;
+    border-radius: 10px; } }
+
 @media screen and (min-width: 1024px) {
   #clases {
     display: grid;
@@ -1270,6 +1279,66 @@
   align-items: center;
   gap: 2rem;
   color: white; }
+
+@media screen and (max-width: 320px) {
+  .main-header > a > img {
+    height: 95px;
+    width: 180px; }
+  .pre-grid-titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    position: relative;
+    justify-content: center; }
+    .pre-grid-titulos .pre-grid-titulos1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      margin-top: 1.5rem;
+      gap: 1.5rem; }
+  #pre-grid {
+    height: 100%;
+    padding: 10px; }
+    #pre-grid .boxes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 250px;
+      width: 200px;
+      background-color: #3066BE;
+      border-radius: 5px;
+      box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
+      gap: 2rem;
+      padding: 10px; }
+    #pre-grid .boxes img {
+      height: 50px;
+      width: 50px; }
+  #grid {
+    height: 100%;
+    margin-top: 15rem; }
+    #grid .box {
+      height: 300px;
+      width: 250px;
+      color: black;
+      border: #23074d;
+      padding: 15px;
+      font-size: 150%;
+      align-content: center;
+      text-align: center;
+      gap: 1rem;
+      cursor: pointer;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease; }
+      #grid .box:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5); } }
 
 @media screen and (max-width: 576px) {
   #pre-grid {
@@ -1744,6 +1813,11 @@ input[type="submit"], #formulario .formulario .comentarios-btns textarea[type="s
 
 input[type="submit"]:hover, #formulario .formulario .comentarios-btns textarea[type="submit"]:hover {
   background-color: #45a049; }
+
+@media screen and (max-width: 320px) {
+  .main-header > a > img {
+    height: 95px;
+    width: 180px; } }
 
 /* MENU HAMBURGUESA -------------------------------------------------------------------------------------------------*/
 #main-header {

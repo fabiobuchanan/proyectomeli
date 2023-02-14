@@ -165,11 +165,15 @@
 
 @media screen and (max-width: 576px) {
 
+  #productos {
+    height: 100%;
+  }
+
    #carousel {
     @include flex-column-centrado;
-    height: 1500px;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    height: 100%;
+    margin-top: 2rem;
+    padding-top: 2rem;
     justify-content: center;
    }
 
@@ -179,19 +183,27 @@
     width: 500px;
   }
 
+  .titulo2 {
+    height: 100%;
+  }
+
+  .iconos {
+      height: 700px;
+  }
+
 }
 
-@media screen and (min-width: 577px) {
+@media screen and (min-width: 576px) {
 
   #carousel {
     @include flex-column-centrado;
-    height: 1300px;
+    height: 100%;
     margin-top: 0;
     margin-bottom: 5rem;
   }
 
   .carousel {
-    margin-bottom: 8rem;
+    margin-bottom: 1rem;
   }
   
   .carousel-item {
@@ -215,7 +227,7 @@
   
     p {
       font-size: 10px;
-    };
+    }
   }
 
     .carousel-control-prev {
@@ -226,19 +238,18 @@
       justify-content: end;
   }
 
+  .iconos {
+    height: 600px;
+}
+
 }
 
 @media screen and (min-width: 678px) {
 
   #carousel {
-    height: 1000px;
-    margin-bottom: 1rem;
+    height: 100%;
   }
 
-  .carousel {
-    margin-bottom: 8rem;
-  }
-  
   .carousel-item {
     height: 506px;
     width: 750px;
@@ -275,13 +286,13 @@
 
 @media screen and (min-width: 768px) {
 
-  #carousel {
-    height: 800px;
-    margin-bottom: 1rem;
+  #productos {
+    padding-top: 4.5px;
   }
 
-  .carousel {
-    margin-bottom: 8rem;
+  #carousel {
+    height: 100%;
+    margin-bottom: 1rem;
   }
   
   .carousel-item {
@@ -325,9 +336,6 @@
     margin-bottom: 1rem;
   }
 
-  .carousel {
-    margin-bottom: 8rem;
-  }
   
   .carousel-item {
     height: 750px;
