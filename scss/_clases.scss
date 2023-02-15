@@ -47,14 +47,24 @@
     }
 }
 
-@media screen and (max-width: 360px) {
- 
-    .clases__video > iframe {
-        height: 70px;
-        width: 150px;
-        border-radius: 10px;
+@media screen and (max-width: 576px) {
+    .clases__video-caja1 iframe {
+        height: 150px;
+        width: 200px;
+    }
+
+    iframe {
+      cursor: pointer;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+    }
+
+    iframe:hover {
+      @include hover-efecto-cajas;
     }
 }
+
 
 @media screen and (min-width: 1024px) {
     #clases {

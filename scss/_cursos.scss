@@ -3,6 +3,7 @@
 
 #cursos {
   height: 100vh;
+  width: 100%;
 }
 
 .pre-grid-titulos {
@@ -96,13 +97,17 @@
     @include flex-column-centrado;
     height: 350px;
     width: 300px;
-    background: linear-gradient(315deg, #ffffff, #d7e1ec);
+    background-image: url(../img/carouse17.jpg);
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-top: 10px;
     border-radius: 12px;
     padding: 20px;
     font-size: 150%;
     text-align: center;
     gap: 1rem;
+
 
     img {
       height: 200px;
@@ -113,17 +118,53 @@
 
     h2 {
       border-radius: 5px;
-      background-color: rgba(66, 177, 51, 0.5);
+      background-color: rgba(189, 27, 89, 0.5);
+      background-size: cover;
       width: 100%;
       font-weight: 400;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     &:hover {
-      transform: scale(1.5);
+      transform: scale(1.05);
       box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2);
     }
+
+    .demo-content {
+      @include flex-column-centrado;
+      gap: 3rem;
+      width: 100%;
+
+      button {
+        font-weight: bold;
+      }
+    }
 }
+
+/* EFECTO BLUR FONDO .BOX */
+.demo-wrap {
+  position: relative;
+}
+
+.demo-wrap:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.demo-content {
+  position: relative;
+}
+/* -------------------------------*/
 
 
 .grid__textos h1 {
@@ -179,12 +220,12 @@
       box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
       gap: 2rem;
       padding: 10px;
-  }
+    }
   
-  .boxes img {
-      height: 50px;
-      width: 50px;
-  }
+    .boxes img {
+        height: 50px;
+        width: 50px;
+    }
   }
 
 
@@ -209,8 +250,7 @@
   
   
       &:hover {
-        transform: scale(1.1);
-        box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+        @include hover-efecto-cajas;
       }
     }
   }
@@ -243,8 +283,7 @@
 
 
     &:hover {
-      transform: scale(1.1);
-      box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+      @include hover-efecto-cajas;
     }
   }
 }
@@ -297,8 +336,7 @@
   
   
       &:hover {
-        transform: scale(1.1);
-        box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+        @include hover-efecto-cajas;
       }
   }
 
@@ -348,8 +386,6 @@
     }
   
     .box {
-      color: black;
-      border: #23074d;
       padding: 15px;
       font-size: 150%;
       align-content: center;
@@ -359,13 +395,12 @@
       transition-property: all;
       transition-duration: 0.3s;
       transition-timing-function: ease;
-  
-  
+    
+    
       &:hover {
-        transform: scale(1.1); 
-        box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+        @include hover-efecto-cajas;
       }
-  }
+    }
 
     .grid__productos div {
         justify-content: center;
@@ -397,6 +432,23 @@
     justify-content: center;
     height: 800px;
 }
+
+.box {
+  padding: 15px;
+  font-size: 150%;
+  align-content: center;
+  text-align: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+
+
+  &:hover {
+    @include hover-efecto-cajas;
+  }
+}
 }
 
 @media screen and (min-width: 1024px) {
@@ -427,8 +479,6 @@
 }
 
 .box {
-    color: black;
-    border: #23074d;
     padding: 15px;
     font-size: 150%;
     align-content: center;
@@ -441,8 +491,7 @@
 
 
     &:hover {
-      transform: scale(1.1);
-      box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5);
+      @include hover-efecto-cajas;
     }
 }
 

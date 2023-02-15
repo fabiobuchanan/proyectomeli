@@ -4,7 +4,8 @@
   padding-top: 4.5rem; }
 
 #grid-body {
-  height: 100vh; }
+  height: 100vh;
+  width: 100%; }
 
 #grid-body {
   display: grid;
@@ -221,7 +222,8 @@
 @media screen and (min-width: 992px) {
   #carousel {
     height: 100%;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    width: 100%; }
   .carousel-item {
     height: 750px;
     width: 1000px;
@@ -917,11 +919,18 @@
       color: #fff;
       padding: 5px; }
 
-@media screen and (max-width: 360px) {
-  .clases__video > iframe {
-    height: 70px;
-    width: 150px;
-    border-radius: 10px; } }
+@media screen and (max-width: 576px) {
+  .clases__video-caja1 iframe {
+    height: 150px;
+    width: 200px; }
+  iframe {
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease; }
+  iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5); } }
 
 @media screen and (min-width: 1024px) {
   #clases {
@@ -1148,7 +1157,8 @@
     margin-right: 2rem; } }
 
 #cursos {
-  height: 100vh; }
+  height: 100vh;
+  width: 100%; }
 
 .pre-grid-titulos {
   display: flex;
@@ -1245,7 +1255,10 @@
   align-items: center;
   height: 350px;
   width: 300px;
-  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+  background-image: url(../img/carouse17.jpg);
+  background-position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: 10px;
   border-radius: 12px;
   padding: 20px;
@@ -1259,14 +1272,45 @@
     margin-bottom: 1rem; }
   .box h2 {
     border-radius: 5px;
-    background-color: rgba(66, 177, 51, 0.5);
+    background-color: rgba(189, 27, 89, 0.5);
+    background-size: cover;
     width: 100%;
     font-weight: 400;
     font-family: Verdana, Geneva, Tahoma, sans-serif; }
   .box:hover {
-    transform: scale(1.5);
+    transform: scale(1.05);
     box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.2); }
+  .box .demo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%; }
+    .box .demo-content button {
+      font-weight: bold; }
 
+/* EFECTO BLUR FONDO .BOX */
+.demo-wrap {
+  position: relative; }
+
+.demo-wrap:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover; }
+
+.demo-content {
+  position: relative; }
+
+/* -------------------------------*/
 .grid__textos h1 {
   text-align: center; }
 
@@ -1337,7 +1381,7 @@
       transition-duration: 0.3s;
       transition-timing-function: ease; }
       #grid .box:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5); } }
 
 @media screen and (max-width: 576px) {
@@ -1360,7 +1404,7 @@
     transition-duration: 0.3s;
     transition-timing-function: ease; }
     .box:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5); } }
 
 @media screen and (min-width: 576px) {
@@ -1403,7 +1447,7 @@
     transition-duration: 0.3s;
     transition-timing-function: ease; }
     .box:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5); }
   .grid__productos div {
     justify-content: center; }
@@ -1439,8 +1483,6 @@
     justify-content: center;
     row-gap: 3rem; }
   .box {
-    color: black;
-    border: #23074d;
     padding: 15px;
     font-size: 150%;
     align-content: center;
@@ -1451,7 +1493,7 @@
     transition-duration: 0.3s;
     transition-timing-function: ease; }
     .box:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5); }
   .grid__productos div {
     justify-content: center; }
@@ -1471,7 +1513,20 @@
     grid-template-columns: 300px 300px;
     grid-gap: 80px;
     justify-content: center;
-    height: 800px; } }
+    height: 800px; }
+  .box {
+    padding: 15px;
+    font-size: 150%;
+    align-content: center;
+    text-align: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease; }
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5); } }
 
 @media screen and (min-width: 1024px) {
   #pre-grid {
@@ -1497,8 +1552,6 @@
     color: #444;
     justify-content: center; }
   .box {
-    color: black;
-    border: #23074d;
     padding: 15px;
     font-size: 150%;
     align-content: center;
@@ -1509,7 +1562,7 @@
     transition-duration: 0.3s;
     transition-timing-function: ease; }
     .box:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 1px 2px 5px 5px rgba(0, 0, 0, 0.5); }
   .grid__productos div {
     justify-content: center; }
