@@ -919,10 +919,7 @@
       color: #fff;
       padding: 5px; }
 
-@media screen and (max-width: 576px) {
-  .clases__video-caja1 iframe {
-    height: 150px;
-    width: 200px; }
+@media screen and (min-width: 576px) {
   iframe {
     cursor: pointer;
     transition-property: all;
