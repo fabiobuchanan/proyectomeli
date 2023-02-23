@@ -420,6 +420,16 @@
 
 @media screen and (min-width: 992px) {
 
+  #pre-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    width: 100%;
+   }
+
   #grid {
     gap: 1rem;
     height: 2000px;
@@ -456,10 +466,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
-    height: 600px;
+    flex-wrap: wrap;
+    height: 800px;
     width: 100%;
-    gap: 5rem;
    }
 
 #grid {
