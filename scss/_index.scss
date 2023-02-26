@@ -106,7 +106,6 @@
 @media screen and (max-width: 576px) {
   #productos { 
     @include flex-column-centrado;
-    height: 1000px; 
     margin-top: 2rem;
     gap: 2rem;
     margin-bottom: 4rem;
@@ -441,6 +440,7 @@
 
 @media screen and (max-width: 620px) {
   .acerca-denosotros__video iframe {
+    max-width: 100%;
       height: 300px;
       width: 450px;
       border-radius: 10px;
@@ -480,6 +480,7 @@
     }
     
     .acerca-denosotros__video iframe {
+      max-width: 100%;
         border-radius: 15px;
     }
 }

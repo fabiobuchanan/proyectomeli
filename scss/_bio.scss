@@ -29,7 +29,6 @@
 
 #bio-img {
     @include flex-column-centrado;
-    height: 100%;
     gap: 2rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -46,7 +45,6 @@
 @media screen and (max-width: 576px) {
     #bio-img {
       @include flex-column-centrado;
-      height: 100%;
       margin-bottom: 20rem;
 
       a > img  {
@@ -59,7 +57,6 @@
 
 @media screen and (min-width: 577px) {
    #bio-img {
-    height: 100%;
     margin-bottom: 5rem;
    }
 }
@@ -67,15 +64,12 @@
 @media screen and (max-width: 991px) {
     #bio-img {
       @include flex-column-centrado;
-      height: 100%;
       margin-bottom: 20rem;
     }
 }
 
 @media screen and (min-width: 992px) {
     #bio-img {
-       
-        height: 100%;
         gap: 3rem;
         margin-bottom: 12rem;
     }
