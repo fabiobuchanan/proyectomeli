@@ -13,7 +13,7 @@ total = precio - descuento;
 console.log("El precio final con el porcentaje de descuento es de " + total);
 alert("El precio final con el porcentaje de descuento es de " + total);*/
 
-
+/*
 
 const PRODUCTO_UNO = "SUSCRIPCION";
 const PRODUCTO_DOS = "CLASE";
@@ -330,3 +330,4 @@ if (producto === PRODUCTO_DOS) {
         "Clase ingresada inexistente. Por favor, intente nuevamente.";
   }
 }
+*/ 
