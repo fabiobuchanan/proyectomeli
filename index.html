@@ -65,6 +65,12 @@
                     <li>
                         <a href="pages/contacto.html">Contacto</a>
                     </li>
+                    <li>
+                        <button id="loginButton">Log in</button>
+                    </li>
+                    <li>
+                        <button id="signUpButton">Sign Up</button>
+                    </li>
                     </ul>
                 </nav>
             </div>
@@ -87,8 +93,50 @@
         </header> 
     </main>
 
+    <section id="login">
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Login</h2>
+              <form id="loginForm">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit">Login</button>
+                <button type="button" id="cancelButton">Cancel</button>
+              </form>
+              <p id="message"></p>
+            </div>
+          </div>
+    </section>
+
+    <section id="signUp">
+        <div id="signUpModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Signup</h2>
+              <form id="signUp">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit">Login</button>
+                <button type="button" id="cancelButton">Cancel</button>
+              </form>
+              <p id="message"></p>
+            </div>
+          </div>
+    </section>
+
     <section class="titulo">
+        <h4>Bienvenidos/as a <br>Melina Foster | Saber en Movimiento</h4><br>
         <h1>"El yoga nos trae al momento presente,<br>el único lugar donde la vida existe"</h1>
+    </section>
+    <section class="promos">
+        <div class="minititulo">
+            <h4>Enterate de nuestras promociones, todos los días, todos los meses!</h4>
+        </div>
     </section>
 
     <section id="productos">
@@ -139,7 +187,7 @@
                           </div>
                           <figcaption>
                             Yoga begins with listening. When we listen, we are giving space to what is.
-                              <span class="credit">Photo: John Doe</span>
+                              <span class="credit">Photo: Fabio Buchanan</span>
                           </figcaption>
                       </figure>
                   </li>
@@ -161,7 +209,7 @@
                           </div>
                           <figcaption>
                             Calming the mind is yoga. Not just standing on the head.
-                              <span class="credit">Photo: John Doe</span>                            
+                              <span class="credit">Photo: Fabio Buchanan</span>                            
                           </figcaption>
                       </figure>
                   </li>
@@ -172,7 +220,7 @@
                           </div>
                           <figcaption>
                             If you seek peace, be still. If you seek wisdom, be silent. If you seek love, be yourself.
-                              <span class="credit">Photo: John Doe</span>                            
+                              <span class="credit">Photo: Fabio Buchanan</span>                            
                           </figcaption>
                       </figure>
                   </li>
@@ -194,7 +242,7 @@
                           </div>
                           <figcaption>
                             Yoga is the journey of the self, through the self, to the self.
-                              <span class="credit">Photo: John Doe</span>                            
+                              <span class="credit">Photo: Fabio Buchanan</span>                            
                           </figcaption>
                       </figure>
                   </li>
@@ -229,7 +277,7 @@
                 <h1>¿Por qué elegirnos?</h1>
             </div>
             <div class="titulo2__titulos__2">
-                <h1>Con Melina Foster | Saber en Movimiento obtenés todo lo necesario<br>
+                <h1>Con <strong> Melina Foster | Saber en Movimiento</strong> obtenés todo lo necesario<br>
                 para tu práctica diaria.</h1>
             </div>
         </div>
@@ -323,6 +371,8 @@
     <script src="js/simulador.js"></script>
     
     <script src="js/main.js"></script>
+
+    <script src="js/servicios.js"></script>
     
 
 </body>
