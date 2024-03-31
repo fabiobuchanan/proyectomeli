@@ -1,4 +1,22 @@
-//  seleccionamos los dos elementos que serán clickables
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+let header = document.getElementById("menu-fixed");
+
+// Get the offset position of the navbar
+let sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+// MENU HAMBURGUESA - seleccionamos los dos elementos que serán clickables
 
 const toggleButton = document.getElementById("button-menu");
 const navWrapper = document.getElementById("nav");
@@ -24,9 +42,6 @@ navWrapper.addEventListener("click", e => {
     toggleButton.classList.remove("close");
   }
 });
-
-
-
 
 
 
@@ -191,3 +206,4 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
     document.getElementById('message').textContent = 'There was a problem with the login process. Please try again later.';
   });
 });
+
