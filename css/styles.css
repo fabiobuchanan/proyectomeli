@@ -37,6 +37,8 @@
   }
 
   .sticky {
+    display: flex;
+    justify-content: center;
     position: fixed;
     top: 0;
     width: 100%;
@@ -47,6 +49,7 @@
     background: -webkit-linear-gradient(to right, #c31431af, #240b3675), url(../img/meli1.webp);
     background: linear-gradient(to right, #c3143183, #240b36ab), url(../img/meli1.webp);
   }
+
 
   .sticky + #grid-body{
     padding-top: 102px;
