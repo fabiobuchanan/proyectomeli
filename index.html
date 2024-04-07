@@ -24,35 +24,6 @@
 </head>
 
 <body id="grid-body">
-
-    <header id="main-header" class="main-header">
-        <a class="main-logo" href="index.html">
-            <img src="img/logofinaltransparente.png" alt="">
-        </a>
-        <nav id="nav" class="main-nav">
-          <div class="nav-links">
-            <a class="link-item" class="item-color" href="index.html">Home</a>
-            <a class="link-item" class="item-color" href="pages/bio.html">Bio</a>
-            <a class="link-item" class="item-color" href="pages/clases.html">Clases</a>
-            <a class="link-item" class="item-color" href="pages/cursos.html">Cursos</a>
-            <a class="link-item" class="item-color" href="pages/contacto.html">Contacto</a>
-            <ul>
-                <li>
-                    <button id="loginButton">Log in</button>
-                </li>
-                <li>
-                    <button id="signUpButton">Sign Up</button>
-                </li>
-            </ul>
-          </div>
-        </nav>
-        <button id="button-menu" class="button-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </header> 
-
       <main id="header2">
         <header id="contenedor">
             <div id="menu-fixed"> 
@@ -118,8 +89,16 @@
                 <input type="text" id="username" name="username" required><br>
                 <label for="password">Password:</label><br>
                 <input type="password" id="password" name="password" required><br><br>
-                <button type="submit">Login</button>
-                <button type="button" id="cancelBtnLogin">Cancel</button>
+                <button class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-primary" type="button" id="cancelBtnLogin">Cancel</button>
+                <div class="col-auto">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                      <label class="form-check-label" for="autoSizingCheck">
+                        Remember me
+                      </label>
+                    </div>
+                </div>
               </form>
               <p id="message"></p>
             </div>
@@ -144,8 +123,16 @@
                 <input type="password" id="password" name="password" required><br><br>
                 <label for="confirmpassword">Confirm Password:</label><br>
                 <input type="text" id="confirmpassword" name="confirmpassword" required><br>
-                <button type="submit">Login</button>
-                <button type="button" id="cancelBtnSignup">Cancel</button>
+                <button class="btn btn-primary" type="submit">Login</button>
+                <button class="btn btn-primary" type="button" id="cancelBtnSignup">Cancel</button>
+                <div class="col-auto">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                      <label class="form-check-label" for="autoSizingCheck">
+                        Remember me
+                      </label>
+                    </div>
+                </div>
               </form>
               <p id="message"></p>
             </div>
