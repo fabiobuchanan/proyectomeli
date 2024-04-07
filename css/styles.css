@@ -50,21 +50,45 @@
     background: linear-gradient(to right, #c3143183, #240b36ab), url(../img/meli1.webp);
   }
 
-
   .sticky + #grid-body{
     padding-top: 102px;
   }
 
+  .sticky + #wave {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+  }
+
+ .menu .menu__ul .disabled a {
+      pointer-events: none;  
+      color: grey;  
+      text-decoration: none; 
+}
+
+.menu .menu__ul .enabled a {
+  pointer-events: auto;
+  color: #ffffff;  
+  text-decoration: none; 
+}
+
 /* LOGIN & SIGNUP ----------------------------------------------------------------------------------------------------------*/
 
-#loginButton { 
+#logInputBtn { 
   color: #ffffff;
   background: transparent;
   padding: 4px;
   border-color: #ffffff;
 }
 
-#signUpButton { 
+#signInputBtn { 
+  color: #ffffff;
+  background: transparent;
+  padding: 4px;
+  border-color: #ffffff;
+}
+
+#logOutBtn {
   color: #ffffff;
   background: transparent;
   padding: 4px;
@@ -2389,7 +2413,8 @@ li:hover {
 #wave {
   position: absolute;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+}
 
 .titulo {
   height: 100vh;

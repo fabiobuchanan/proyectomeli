@@ -1,7 +1,8 @@
+
+// Sticky & Fixed Nav Bar.
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
-// Get the header
 let header = document.getElementById("menu-fixed");
 
 // Get the offset position of the navbar
@@ -16,33 +17,21 @@ function myFunction() {
   }
 }
 
-// MENU HAMBURGUESA - seleccionamos los dos elementos que serán clickables
 
-const toggleButton = document.getElementById("button-menu");
-const navWrapper = document.getElementById("nav");
+// USER
+const user = "";
 
-/* 
-  cada ves que se haga click en el botón 
-  agrega y quita las clases necesarias 
-  para que el menú se muestre.
-*/
-toggleButton.addEventListener("click", () => {
-  toggleButton.classList.toggle("close");
-  navWrapper.classList.toggle("show");
-});
-
-/* 
-  Cuándo se haga click fuera del contenedor de enlaces 
-  el menú debe esconderse.
-*/
-
-navWrapper.addEventListener("click", e => {
-  if (e.target.id === "nav") {
-    navWrapper.classList.remove("show");
-    toggleButton.classList.remove("close");
-  }
-});
-
+// Armar función para verificar si existe un usuario loggeado
+if(!user) {
+  const misCursos = document.getElementById('cursos2');
+  misCursos.classList.add('disabled');
+  document.getElementById('logOut').style.display = 'none';
+} else {
+  const misCursos = document.getElementById('cursos2');
+  misCursos.classList.add('enabled');
+  document.getElementById('logInputBtn').style.display = 'none';
+  document.getElementById('signInputBtn').style.display = 'none';
+}
 
 
 // LOGIN
@@ -58,7 +47,8 @@ function hideLoginModal() {
 }
 
 // Event listener for the login button in the header
-document.getElementById('loginButton').addEventListener('click', function() {
+const login = document.getElementById('logInputBtn'); 
+  login.addEventListener('click', function() {
   showLoginModal();
 });
 
@@ -76,20 +66,23 @@ window.addEventListener('click', function(event) {
 });
 
 // Event listener for the cancel button within the modal
-document.getElementById('cancelButton').addEventListener('click', function() {
+document.getElementById('cancelBtnLogin').addEventListener('click', function() {
   hideLoginModal();
 });
 
 // Event listener for the login form submission
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault();  
+
+  const misCursos = document.getElementById('cursos2');
+  misCursos.classList.add('enabled');  
 
   // Get the input values
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
+  let username = document.getElementById('username').value;
+  let password = document.getElementById('password').value;
 
   // Construct the request body
-  var requestBody = JSON.stringify({ username: username, password: password });
+  let requestBody = JSON.stringify({ username: username, password: password });
 
   // Send the request to the server
   fetch('/login', {
@@ -101,7 +94,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   })
   .then(response => {
     if (response.ok) {
-      return response.json();
+     user = response.user; 
     } else {
       throw new Error('Network response was not ok.');
     }
@@ -140,7 +133,8 @@ function hideSignUpModal() {
 }
 
 // Event listener for the login button in the header
-document.getElementById('signUpButton').addEventListener('click', function() {
+const signUp = document.getElementById('signInputBtn');
+signUp.addEventListener('click', function() {
   showSignUpModal();
 });
 
@@ -151,14 +145,14 @@ document.querySelector('.close').addEventListener('click', function() {
 
 // Event listener for clicks outside of the modal to close it
 window.addEventListener('click', function(event) {
-  var modal = document.getElementById('signUpModal');
+  let modal = document.getElementById('signUpModal');
   if (event.target == modal) {
     hideSignUpModal();
   }
 });
 
 // Event listener for the cancel button within the modal
-document.getElementById('cancelButton').addEventListener('click', function() {
+document.getElementById('cancelBtnSignup').addEventListener('click', function() {
   hideSignUpModal();
 });
 
@@ -166,12 +160,15 @@ document.getElementById('cancelButton').addEventListener('click', function() {
 document.getElementById('signUpForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent form submission
 
-  // Get the input values
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
+  // Información para mandarle a César y que guarde al usuario, para luego poder hacer el LOGIN.
+  let name = document.getElementById('nombre').value;
+  let apellido = document.getElementById('apellido').value;
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+  let reingresePassword = document.getElementById('reingreseContraseña').value;
 
   // Construct the request body
-  var requestBody = JSON.stringify({ username: username, password: password });
+  let requestBody = JSON.stringify({ username: username, password: password });
 
   // Send the request to the server
   fetch('/signUp', {
@@ -206,4 +203,33 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
     document.getElementById('message').textContent = 'There was a problem with the login process. Please try again later.';
   });
 });
+
+
+// MENU HAMBURGUESA - seleccionamos los dos elementos que serán clickables
+
+const toggleButton = document.getElementById("button-menu");
+const navWrapper = document.getElementById("nav");
+
+/* 
+  cada ves que se haga click en el botón 
+  agrega y quita las clases necesarias 
+  para que el menú se muestre.
+*/
+toggleButton.addEventListener("click", () => {
+  toggleButton.classList.toggle("close");
+  navWrapper.classList.toggle("show");
+});
+
+/* 
+  Cuándo se haga click fuera del contenedor de enlaces 
+  el menú debe esconderse.
+*/
+
+navWrapper.addEventListener("click", e => {
+  if (e.target.id === "nav") {
+    navWrapper.classList.remove("show");
+    toggleButton.classList.remove("close");
+  }
+});
+
 
