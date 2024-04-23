@@ -12,25 +12,11 @@ let sticky = header.offsetTop;
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    document.getElementById('logoOn').style.display = 'none';
   } else {
     header.classList.remove("sticky");
+    document.getElementById('logoOn').style.display = 'block';
   }
-}
-
-
-// USER
-const user = "";
-
-// Armar función para verificar si existe un usuario loggeado
-if(!user) {
-  const misCursos = document.getElementById('cursos2');
-  misCursos.classList.add('disabled');
-  document.getElementById('logOut').style.display = 'none';
-} else {
-  const misCursos = document.getElementById('cursos2');
-  misCursos.classList.add('enabled');
-  document.getElementById('logInputBtn').style.display = 'none';
-  document.getElementById('signInputBtn').style.display = 'none';
 }
 
 
@@ -78,14 +64,14 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   misCursos.classList.add('enabled');  
 
   // Get the input values
-  let username = document.getElementById('username').value;
+  let email = document.getElementById('username').value;
   let password = document.getElementById('password').value;
 
   // Construct the request body
-  let requestBody = JSON.stringify({ username: username, password: password });
+  let requestBody = JSON.stringify({ email, password });
 
   // Send the request to the server
-  fetch('/login', {
+  fetch('http://localhost:8080/api/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -120,7 +106,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
 
 
-// SIGN UP
+// REGISTER
 
 // Function to show the login modal
 function showSignUpModal() {
@@ -161,17 +147,17 @@ document.getElementById('signUpForm').addEventListener('submit', function(event)
   event.preventDefault(); // Prevent form submission
 
   // Información para mandarle a César y que guarde al usuario, para luego poder hacer el LOGIN.
-  let name = document.getElementById('nombre').value;
-  let apellido = document.getElementById('apellido').value;
+  let firstName = document.getElementById('nombre').value;
+  let lastName = document.getElementById('apellido').value;
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
   let reingresePassword = document.getElementById('reingreseContraseña').value;
 
   // Construct the request body
-  let requestBody = JSON.stringify({ username: username, password: password });
+  let requestBody = JSON.stringify({ firstName, lastName, email, password });
 
   // Send the request to the server
-  fetch('/signUp', {
+  fetch('http://localhost:8080/api/auth/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
