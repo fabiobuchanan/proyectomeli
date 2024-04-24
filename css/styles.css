@@ -132,25 +132,20 @@ li:hover {
     flex-direction: row-reverse;
     gap: 10rem;
     z-index: 1000;
+    padding: 0;
+    width: 100%;
   }
 
-  .sticky {
+  .sticky{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
-    width: 100%;
     height: 100px;
     background: #23074d;
     background: #c31432;
     background: -webkit-linear-gradient(to right, #b3606eaf, #240b3675);
     background: linear-gradient(to right, #ac6c7783, #13051dab);
-  }
-
-  #menu-fixed {
-    display: flex;
-    padding: 0;
-    width: 100%;
   }
 
   .sticky .logo {
@@ -167,13 +162,14 @@ li:hover {
     width: 210px;
   }
 
-  .sticky .meu__nav {
-    justify-content: right;
-  }
-
   .sticky .menu__ul {
     display: flex;
-    align-items:center ;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .sticky .menu__ul li a {
+    font-weight: 500;
   }
 
 /* LOGIN & SIGNUP ----------------------------------------------------------------------------------------------------------*/
@@ -309,6 +305,7 @@ li:hover {
     height: 100%; } }
 
 /* CARROUSEL IMÁGENES -----------------------------------------------------------------------------------------*/
+
 @media screen and (max-width: 767px) {
   .containersection {
     display: none; } }

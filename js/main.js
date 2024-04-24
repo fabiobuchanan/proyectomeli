@@ -12,10 +12,8 @@ let sticky = header.offsetTop;
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
-    document.getElementById('logoOn').style.display = 'none';
   } else {
     header.classList.remove("sticky");
-    document.getElementById('logoOn').style.display = 'block';
   }
 }
 
