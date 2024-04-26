@@ -17,54 +17,54 @@
 
 <body id="grid-body-clases">
 
-    <header id="main-header" class="main-header">
-        <a class="main-logo" href="../index.html">
-            <img src="../img/logofinaltransparente.png" alt="">
-        </a>
-        <nav id="nav" class="main-nav">
-          <div class="nav-links">
-            <a class="link-item" class="item-color" href="../index.html">Home</a>
-            <a class="link-item" class="item-color" href="bio.html">Bio</a>
-            <a class="link-item" class="item-color" href="clases.html">Clases</a>
-            <a class="link-item" class="item-color" href="cursos.html">Cursos</a>
-            <a class="link-item" class="item-color" href="contacto.html">Contacto</a>
-          </div>
-        </nav>
-        <button id="button-menu" class="button-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </header>
-
-      <main id="header2">
+  <main id="header2">
     <header id="contenedor">
-        <div class="menu">
-             <nav class="menu__nav">
-                <ul class="menu__ul">
-                 <li>
-                     <a href="../index.html">Home</a>
-                 </li>
-                 <li>
-                     <a href="bio.html">Bio</a>
-                 </li>
-                 <li>
-                     <a href="clases.html">Clases</a>
-                 </li>
-                 <li>
-                     <a href="cursos.html">Cursos</a>
-                 </li>
-                 <li>
-                     <a href="contacto.html">Contacto</a>
-                 </li>
-                </ul>
-             </nav>
-        </div>
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../img/Icono1.png" alt="" class="logo__logo">
-            </a>
-        </div>
+        <div id="menu-fixed"> 
+            <div class="menu">
+                <nav class="menu__nav">
+                    <ul class="menu__ul">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="bio.html">Bio</a>
+                    </li>
+                    <li>
+                        <a href="clases.html">Clases</a>
+                    </li>
+                    <li>
+                        <a href="cursos.html">Cursos</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                    <li id="cursos2">
+                        <a href="miscursos.html">Mis cursos</a>
+                    </li>
+                    <li>
+                        <button id="logInputBtn" class="btn btn-primary">Log in</button>
+                    </li>
+                    <li>
+                        <button id="signInputBtn" class="btn btn-primary">Register</button>
+                    </li>
+                    <li>
+                        <button id="logOutBtn" class="btn btn-primary">Log Out</button>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../img/Icono1.png" alt="" class="logo__logo">
+                </a>
+            </div>
+            <div class="logo2">
+                <a href="index.html">
+                    <img src="../img/logofinaltransparente.png" alt="" class="logo2Img">
+                </a>
+            </div>
+    </div>
+        
     
         <section id="wave">
             <div class="wave" style="height: 150px; overflow: hidden;">
@@ -132,6 +132,67 @@
       </div>
     </section>
   -->
+
+  <section id="login">
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Login</h2>
+          <form id="loginForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <button class="btn btn-primary" type="submit">Login</button>
+            <button class="btn btn-primary" type="button" id="cancelBtnLogin">Cancel</button>
+            <div class="col-auto">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                  <label class="form-check-label" for="autoSizingCheck">
+                    Remember me
+                  </label>
+                </div>
+            </div>
+          </form>
+          <p id="message"></p>
+        </div>
+      </div>
+</section>
+
+<section id="signUp">
+    <div id="signUpModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Register</h2>
+          <form id="signUp">
+            <label for="name">Name:</label><br>
+            <input type="text" id=" name" name="name" required><br>
+            <label for="username">Last Name:</label><br>
+            <input type="text" id="lastname" name="lastname" required><br>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="confirmpassword">Confirm Password:</label><br>
+            <input type="text" id="confirmpassword" name="confirmpassword" required><br>
+            <button class="btn btn-primary" type="submit">Login</button>
+            <button class="btn btn-primary" type="button" id="cancelBtnSignup">Cancel</button>
+            <div class="col-auto">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                  <label class="form-check-label" for="autoSizingCheck">
+                    Remember me
+                  </label>
+                </div>
+            </div>
+          </form>
+          <p id="message"></p>
+        </div>
+      </div>
+</section>
+
     <section id="clases" class="container">
         <div class="clases__video">
             <div class="clases__video-caja1">
@@ -223,6 +284,8 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
       crossorigin="anonymous"></script>
 
+      <script src="../js/simulador.js"></script>
+      
       <script src="../js/main.js"></script>
 
 </body>

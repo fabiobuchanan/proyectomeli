@@ -43,7 +43,7 @@ document.querySelector('.close').addEventListener('click', function() {
 
 // Event listener for clicks outside of the modal to close it
 window.addEventListener('click', function(event) {
-  var modal = document.getElementById('loginModal');
+  let modal = document.getElementById('loginModal');
   if (event.target == modal) {
     hideLoginModal();
   }

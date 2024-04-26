@@ -235,6 +235,15 @@ li:hover {
   background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+#cursos2 a {
+  color: grey; 
+}
+
 /* PRODUCTOS --------------------------------------------------------------------------------------------------*/
 
 #productos {
