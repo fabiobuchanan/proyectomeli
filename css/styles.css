@@ -175,7 +175,7 @@ li:hover {
 /* LOGIN & SIGNUP ----------------------------------------------------------------------------------------------------------*/
 
 #loginModal {
-  position: absolute;
+  position: fixed;
   top:50%;
   left: 50%;
   transform: translate(-50% , -50%);
@@ -197,7 +197,7 @@ li:hover {
 }
 
 #signUpModal {
-  position: absolute;
+  position: fixed;
   top:50%;
   left: 50%;
   transform: translate(-50% , -50%);
