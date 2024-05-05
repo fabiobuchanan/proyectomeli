@@ -21,8 +21,8 @@ function showSignUpModal() {
   
   // Event listener for clicks outside of the modal to close it
   window.addEventListener("click", function (event) {
-    let modal = document.getElementById("signUpModal");
-    if (event.target == modal) {
+    let modalRegister = document.getElementById("signUpModal");
+    if (event.target == modalRegister) {
       hideSignUpModal();
     }
   });
