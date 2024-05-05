@@ -20,12 +20,10 @@ function myFunction() {
 
 // LOGIN
 
-// Function to show the login modal
 function showLoginModal() {
   document.getElementById("loginModal").style.display = "block";
 }
 
-// Function to hide the login modal
 function hideLoginModal() {
   document.getElementById("loginModal").style.display = "none";
 }
@@ -88,21 +86,16 @@ document
         }
       })
       .then((data) => {
-        // Handle the response from the server
         if (data.success) {
-          // If login successful, show success message
           document.getElementById("message").textContent = "Login successful!";
-          // Hide the login modal after successful login
           hideLoginModal();
         } else {
-          // If login failed, show error message
           document.getElementById("message").textContent =
             "Invalid username or password. Please try again.";
         }
       })
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);
-        // Show error message if there's a problem with the fetch operation
         document.getElementById("message").textContent =
           "There was a problem with the login process. Please try again later.";
       });
@@ -110,12 +103,10 @@ document
 
 // REGISTER
 
-// Function to show the login modal
 function showSignUpModal() {
   document.getElementById("signUpModal").style.display = "block";
 }
 
-// Function to hide the login modal
 function hideSignUpModal() {
   document.getElementById("signUpModal").style.display = "none";
 }
@@ -200,29 +191,3 @@ document
       });
   });
 
-// MENU HAMBURGUESA - seleccionamos los dos elementos que serán clickables
-
-const toggleButton = document.getElementById("button-menu");
-const navWrapper = document.getElementById("nav");
-
-/* 
-  cada ves que se haga click en el botón 
-  agrega y quita las clases necesarias 
-  para que el menú se muestre.
-*/
-toggleButton.addEventListener("click", () => {
-  toggleButton.classList.toggle("close");
-  navWrapper.classList.toggle("show");
-});
-
-/* 
-  Cuándo se haga click fuera del contenedor de enlaces 
-  el menú debe esconderse.
-*/
-
-navWrapper.addEventListener("click", (e) => {
-  if (e.target.id === "nav") {
-    navWrapper.classList.remove("show");
-    toggleButton.classList.remove("close");
-  }
-});
