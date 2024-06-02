@@ -160,10 +160,12 @@ li:hover {
   position: fixed;
   top: 0;
   height: 100px;
+  background-color: #ffff;
+  /*
   background: #23074d;
   background: #c31432;
   background: -webkit-linear-gradient(to right, #b3606eaf, #240b3675);
-  background: linear-gradient(to right, #ac6c7783, #13051dab);
+  background: linear-gradient(to right, #ac6c7783, #13051dab); */
 }
 
 .sticky .logo {
@@ -188,6 +190,34 @@ li:hover {
 
 .sticky .menu__ul li a {
   font-weight: 500;
+  color: #000000;
+}
+
+.sticky #logInputBtn {
+  color: #000000;
+  background: transparent;
+  padding: 4px;
+  border-color:#23074d;
+  height: 35px;
+  width: 60px;
+}
+
+.sticky #signInputBtn {
+  color: #000000;
+  background: transparent;
+  padding: 4px;
+  border-color:#23074d;
+  height: 35px;
+  width: 90px;
+}
+
+.sticky #logOutBtn {
+  color: #000000;
+  background: transparent;
+  padding: 4px;
+  border-color:#23074d;
+  height: 35px;
+  width: 80px;
 }
 
 /* LOGIN & SIGNUP ----------------------------------------------------------------------------------------------------------*/
