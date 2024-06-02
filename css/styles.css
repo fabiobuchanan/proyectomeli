@@ -271,6 +271,14 @@ li:hover {
   display: block;
 }
 
+#cargasAdmin {
+  display: none;
+}
+
+#cargasAdmin .enabled {
+  display: block;
+}
+
 /* PRODUCTOS --------------------------------------------------------------------------------------------------*/
 
 #productos {
@@ -1480,7 +1488,7 @@ svg {
   width: 100%;
   height: 100%;
   opacity: 0.8;
-  background: white;
+  background: rgb(255, 255, 255);
   background-position: 50% o;
   background-size: cover;
 }
@@ -1517,7 +1525,7 @@ svg {
   text-align: center;
   height: 300px;
   width: 250px;
-  background-color: #3066be;
+  background-color: #6999e6;
   border-radius: 5px;
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
   gap: 2rem;
@@ -1528,14 +1536,17 @@ svg {
   width: 50px;
 }
 
+
+
 #cursos {
   background-image: url(../img/landscape2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  height: 2000px;
+  height: 100%;
 }
+
 
 #grid {
   display: flex;
