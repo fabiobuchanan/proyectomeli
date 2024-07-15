@@ -1,11 +1,17 @@
 // LOGIN
 
-function showLoginModal() {
+  function showLoginModal() {
     document.getElementById("loginModal").style.display = "block";
   }
   
   function hideLoginModal() {
     document.getElementById("loginModal").style.display = "none";
+  }
+
+
+  function cerrarModal() {
+    const modal = document.getElementById("loginModal");
+    modal.style.display = "none";
   }
   
   // Event listener for the login button in the header
@@ -14,18 +20,17 @@ function showLoginModal() {
     showLoginModal();
   });
   
-  // Event listener for the close button within the modal
   document.querySelector(".close").addEventListener("click", function () {
     hideLoginModal();
   });
   
-  // Event listener for clicks outside of the modal to close it
-  window.addEventListener("click", function (event) {
-    let modal = document.getElementById("loginModal");
+  const modal = document.getElementById("loginModal");
+  window.onclick = function(event) {
     if (event.target == modal) {
-      hideLoginModal();
+        cerrarModal();
     }
-  });
+}
+
   
   // Event listener for the cancel button within the modal
   document.getElementById("cancelBtnLogin").addEventListener("click", function () {

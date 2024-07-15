@@ -18,6 +18,11 @@ function showSignUpModal() {
   document.querySelector(".close").addEventListener("click", function () {
     hideSignUpModal();
   });
+
+  document.getElementById("cancelBtnSignup").addEventListener("click", function () {
+    hideLoginModal();
+  });
+
   
   // Event listener for clicks outside of the modal to close it
   window.addEventListener("click", function (event) {

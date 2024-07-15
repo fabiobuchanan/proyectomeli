@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/loginyregistro.css">
+    <link rel="stylesheet" href="../css/clases.css">
     <meta name="keywords" content="yoga, movimiento, movement, conciencia, clases, classes">
     <link rel="icon" href="../img/Icono1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -42,19 +44,19 @@
                         <a href="miscursos.html">Mis cursos</a>
                     </li>
                     <li>
-                        <button id="logInputBtn" class="btn btn-primary">Log in</button>
+                        <button id="logInputBtn" class="btn btn-primary">Login</button>
                     </li>
                     <li>
-                        <button id="signInputBtn" class="btn btn-primary">Register</button>
+                        <button id="signInputBtn" class="btn btn-primary">Registrarse</button>
                     </li>
                     <li>
-                        <button id="logOutBtn" class="btn btn-primary">Log Out</button>
+                        <button id="logOutBtn" class="btn btn-primary">Logout</button>
                     </li>
                     </ul>
                 </nav>
             </div>
             <div class="logo">
-                <a href="index.html">
+                <a href="../index.html">
                     <img src="../img/Icono1.png" alt="" class="logo__logo">
                 </a>
             </div>
@@ -79,6 +81,7 @@
     </header> 
       </main>
 
+    <!-- 
   <section id="login">
     <div id="loginModal" class="modal">
         <div class="modal-content">
@@ -138,9 +141,124 @@
         </div>
       </div>
 </section>
+-->
+
+<div id="loginModal" class="modal">
+  <div class="row">
+    <span class="close">&times;</span>
+    <div class="col-lg-10 col-xl-9 mx-auto">
+      <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+        <div class="card-img-left d-none d-md-flex">
+          <!-- Background image for card set in CSS! -->
+        </div>
+        <div class="card-body p-4 p-sm-5">
+          <h5 class="card-title text-center mb-5 fw-light fs-5">Inicie Sesión</h5>
+          <form id="loginForm">
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required autofocus>
+              <label for="floatingInputUsername">Usuario</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+              <label for="floatingInputEmail">Dirección de correo</label>
+            </div>
+
+            <hr>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Contraseña</label>
+            </div>
+
+            <div class="d-grid mb-2 ses-cancel">
+              <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Iniciar Sesión</button>
+              <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase btn-signup" type="button" id="cancelBtnLogin" >Cancelar</button>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="d-grid mb-2">
+              <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                <i class="fab fa-google me-2"></i>Inicie sesión con Google
+              </button>
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                <i class="fab fa-facebook-f me-2"></i> Inicie sesión con Facebook
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Registrarse -->
+
+<div id="signUpModal" class="modal">
+  <div class="row">
+    <span class="close">&times;</span>
+    <div class="col-lg-10 col-xl-9 mx-auto">
+      <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+        <div class="card-img-left d-none d-md-flex">
+          <!-- Background image for card set in CSS! -->
+        </div>
+        <div class="card-body p-4 p-sm-5">
+          <h5 class="card-title text-center mb-5 fw-light fs-5">Registrarse</h5>
+          <form>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+              <label for="floatingInputEmail">Dirección de correo</label>
+            </div>
+
+            <hr>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Contraseña</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password">
+              <label for="floatingPasswordConfirm">Confirmar Contraseña</label>
+            </div>
+
+            <div class="d-grid mb-2 reg-cancel">
+              <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Registrarse</button>
+              <button class="btn btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="button" id="cancelBtnSignup">Cancelar</button>
+            </div>
+  
+
+            <a class="d-block text-center mt-2 small" href="#">¿ya tenés una cuenta? Iniciá Sesión.</a>
+
+            <hr class="my-4">
+
+            <div class="d-grid mb-2">
+              <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                <i class="fab fa-google me-2"></i> Registrarse con Google
+              </button>
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                <i class="fab fa-facebook-f me-2"></i> Registrarse con Facebook
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="d-flex justify-content-center clases-titulomain">
-  <p class="h2 display-5 text-center clases-titulo">Obtené acceso a nuestras clases gratuitas<br>Incluidas con tu <u>Suscripción</u></p>
+  <p class="h2 display-6 text-center clases-titulo">Obtené acceso a nuestras clases gratuitas<br>Incluidas con tu <u>Suscripción</u></p>
 </div>
 
     <section id="clases" class="container">
@@ -169,28 +287,124 @@
        </div>
     </section>
 
-    <section class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+
+
+  <div class="pricing6 py-5 bg-light">
+    <div class="container"> 
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h3 class="mb-3 display-5">Accedé a nuestras clases con tu Suscripción Mensual y Anual</h3>
+          <h6 class="subtitle font-weight-normal">No te pierdas la oportunidad de acceder a estos beneficios para una práctica conciente. <br> 100% buscando la mejor calidad de vida.</h6>
         </div>
       </div>
-  </section>
+      <!-- row  -->
+      <div class="row mt-4">
+        <!-- column  -->
+        <div class="col-md-6">
+          <div class="card card-shadow border-0 mb-4">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center planAnual">
+                <h5 class="font-medium mb-0">Plan Anual</h5>
+                <div class="ml-auto"><span class="badge badge-danger font-weight-normal p-2">El + elegido</span></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-5 text-center">
+                  <div class="price-box my-3">
+                    <sup>$</sup><span class="text-dark display-5">99.99</span>
+                    <h6 class="font-weight-light">ANUAL</h6>
+                    <a class="btn btn-info-gradiant font-14 border-0 text-white p-3 btn-block mt-3" href="#">Elegir Plan</a>
+                  </div>
+                </div>
+                <div class="col-lg-7 align-self-center">
+                  <ul class="list-inline pl-3 font-14 font-weight-medium text-dark">
+                    <li class="py-2"><i class="icon-check text-info mr-2"></i> <span>6 días a la semana </span></li>
+                    <li class="py-2"><i class="icon-check text-info mr-2"></i> <span>Acceso a entranadora personalizada</span></li>
+                    <li class="py-2"><i class="icon-check text-info mr-2"></i> <span>Incluye plan de nutrición personalizado</span></li>
+                    <li class="py-2"><i class="icon-check text-info mr-2"></i> <span>Acceso a descuentos (%) en Cursos.</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- column  -->
+        <!-- column  -->
+        <div class="col-md-6">
+          <div class="card card-shadow border-0 mb-4">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center">
+                <h5 class="font-medium m-b-0">Plan Mensual</h5>
+              </div>
+              <div class="row">
+                <div class="col-lg-5 text-center">
+                  <div class="price-box my-3">
+                    <sup>$</sup><span class="text-dark display-5">9.99</span>
+                    <h6 class="font-weight-light">MENSUAL</h6>
+                    <a class="btn btn-info-gradiant border-0 font-14 text-white p-3 btn-block mt-3" href="#">Elegir Plan</a>
+                  </div>
+                </div>
+                <div class="col-lg-7 align-self-center">
+                  <ul class="list-inline pl-3 font-14 font-weight-medium text-dark">
+                    <li class="py-2"><i class="icon-check text-info mr-2"></i> <span>Acceso todos los paquetes de clases</span></li>
+                    <li class="py-2"><i class="icon-check text-info mr-2"></i> <span>Incluye suscripción a nuestro Newsletter</span></li>
+                    <li class="py-2"><i class="icon-check text-info mr-2"></i> <span>No incluye atención personalizada</span></li>
+                    <li class="py-2"><i class="icon-check text-info mr-2"></i> <span>No incluye descuentos en Cursos</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- column  -->
+      </div>
+    </div>
+  </div>
+
+  <div id="carouselExampleCaptions" class="carousel slide d-flex align-items-center container carouselMain">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../img/MeliYoga3.jpg" class="d-block w-100 carouselClases" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Yin Yoga & Stretching</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/MeliYoga4.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Power Yoga & Movimiento Conciente -FNKS-</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/MeliYoga2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Tips & Tricks</h5>
+          <p>El paso a paso de cada postura <br> ¿Cómo llegar a hacerlas?</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/MeliYoga5.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Ballet y Técnica de Danza</h5>
+          <p>Integrando Yoga con Ballet.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
     <footer id="footer">
         <div class="footer">  
@@ -230,7 +444,7 @@
       
       <script src="../js/main.js"></script>
       <script src="../js/login.js"></script>
-      <script src="../js/register.js"></script>
+      <script src="../js/registrarse.js"></script>
 
 </body>
 </html>

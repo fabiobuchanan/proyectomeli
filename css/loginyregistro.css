@@ -1,0 +1,93 @@
+
+#loginModal {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+}
+
+.modal-content {
+  justify-content: center;
+  align-items: center;
+}
+
+.form-check {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5px;
+}
+
+#signUpModal {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+}
+
+#logInputBtn {
+  color: #ffffff;
+  background: transparent;
+  padding: 4px;
+  border-color: #ffffff;
+  height: 35px;
+  width: 60px;
+}
+
+#signInputBtn {
+  color: #ffffff;
+  background: transparent;
+  padding: 4px;
+  border-color: #ffffff;
+}
+
+#logOutBtn {
+  color: #ffffff;
+  background: transparent;
+  padding: 4px;
+  border-color: #ffffff;
+  height: 35px;
+  width: 80px;
+}
+
+
+.card-img-left {
+    width: 45%;
+    background: scroll center url(../img/carouse18.jpg);
+    background-size: cover;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .btn-signup {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .btn-google {
+    color: white !important;
+    background-color: #ea4335;
+  }
+  
+  .btn-facebook {
+    color: white !important;
+    background-color: #3b5998;
+  }
+
+  .reg-cancel {
+    gap: 1rem;
+  }
+
+  .ses-cancel {
+    gap: 1rem;
+  }
+  

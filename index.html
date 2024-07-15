@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/loginyregistro.css">
     <link rel="icon" href="img/Icono1.png">
     <meta name="keywords" content="yoga, inicio, home, homepage, movimiento, movement, conciencia">
     <meta name="description" content="Melina Foster | Saber en Movimiento - Encontrá tu curso de Yoga y todas las 
@@ -24,366 +25,453 @@
 </head>
 
 <body id="grid-body">
-      <main id="header2">
-        <header id="contenedor">
-            <div id="menu-fixed"> 
-                <div class="menu">
-                    <nav class="menu__nav">
-                        <ul class="menu__ul">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="pages/bio.html">Bio</a>
-                        </li>
-                        <li>
-                            <a href="pages/clases.html">Clases</a>
-                        </li>
-                        <li>
-                            <a href="pages/cursos.html">Cursos</a>
-                        </li>
-                        <li>
-                            <a href="pages/contacto.html">Contacto</a>
-                        </li>
-                        <li id="cursos2">
-                            <a href="pages/miscursos.html">Mis cursos</a>
-                        </li>
-                        <li id="cargasAdmin">
-                            <a href="#">Mis cargas</a>
-                        </li>
-                        <li>
-                            <button id="logInputBtn" class="btn btn-primary">Log in</button>
-                        </li>
-                        <li>
-                            <button id="signInputBtn" class="btn btn-primary">Registrarse</button>
-                        </li>
-                        <li>
-                            <button id="logOutBtn" class="btn btn-primary">Log Out</button>
-                        </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="img/Icono1.png" alt="" class="logo__logo">
-                    </a>
-                </div>
-                <div class="logo2">
-                    <a href="index.html">
-                        <img src="img/logofinaltransparente.png" alt="" class="logo2Img">
-                    </a>
-                </div>
-        </div>
-            <section id="wave">
-                <div class="wave" style="height: 150px; overflow: hidden;">
-                    <svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                    style="height: 100%; width: 100%;">
-                        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                        style="stroke: none; fill: #fff;">
-                        </path>
-                    </svg>
-                </div>
-            </section>
-        </header> 
-    </main>
+    <main id="header2">
+      <header id="contenedor">
+          <div id="menu-fixed"> 
+              <div class="menu">
+                  <nav class="menu__nav">
+                      <ul class="menu__ul">
+                      <li>
+                          <a href="index.html">Home</a>
+                      </li>
+                      <li>
+                          <a href="pages/bio.html">Bio</a>
+                      </li>
+                      <li>
+                          <a href="pages/clases.html">Clases</a>
+                      </li>
+                      <li>
+                          <a href="pages/cursos.html">Cursos</a>
+                      </li>
+                      <li>
+                          <a href="pages/contacto.html">Contacto</a>
+                      </li>
+                      <li id="cursos2">
+                          <a href="pages/miscursos.html">Mis cursos</a>
+                      </li>
+                      <li id="cargasAdmin">
+                          <a href="/pages/admincargas.html">Mis cargas</a>
+                      </li>
+                      <li>
+                        <button id="logInputBtn" class="btn btn-primary">Login</button>
+                    </li>
+                    <li>
+                        <button id="signInputBtn" class="btn btn-primary">Registrarse</button>
+                    </li>
+                    <li>
+                        <button id="logOutBtn" class="btn btn-primary">Logout</button>
+                    </li>
+                      </ul>
+                  </nav>
+              </div>
+              <div class="logo">
+                  <a href="index.html">
+                      <img src="img/Icono1.png" alt="" class="logo__logo">
+                  </a>
+              </div>
+              <div class="logo2">
+                  <a href="index.html">
+                      <img src="img/logofinaltransparente.png" alt="" class="logo2Img">
+                  </a>
+              </div>
+      </div>
+          <section id="wave">
+              <div class="wave" style="height: 150px; overflow: hidden;">
+                  <svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                  style="height: 100%; width: 100%;">
+                      <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                      style="stroke: none; fill: #fff;">
+                      </path>
+                  </svg>
+              </div>
+          </section>
+      </header> 
+  </main>
 
-    <section id="login" class="container">
-        <div id="loginModal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <h2>Login</h2>
-              <form id="loginForm">
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" required><br>
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password" required><br><br>
-                <button class="btn btn-primary" type="submit">Login</button>
-                <button class="btn btn-primary" type="button" id="cancelBtnLogin">Cancelar</button>
-                <div class="col-auto">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                      <label class="form-check-label" for="autoSizingCheck">
-                        Recordarme
-                      </label>
-                    </div>
-                </div>
-              </form>
-            </div>
+  <div id="loginModal" class="modal">
+    <div class="row">
+      <span class="close">&times;</span>
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-img-left d-none d-md-flex">
+            <!-- Background image for card set in CSS! -->
           </div>
-    </section>
-
-    <section id="signUp" class="container">
-        <div id="signUpModal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <h2>Registrarse</h2>
-              <form id="signUpTwo">
-                <label for="name">Name:</label><br>
-                <input type="text" id=" name" name="name" required><br>
-                <label for="username">Last Name:</label><br>
-                <input type="text" id="lastname" name="lastname" required><br>
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" required><br>
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" required><br>
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password" required><br><br>
-                <label for="confirmpassword">Confirm Password:</label><br>
-                <input type="text" id="confirmpassword" name="confirmpassword" required><br>
-                <div>
-                <button class="btn btn-primary" type="submit">Login</button>
-                <button class="btn btn-primary" type="button" id="cancelBtnSignup">Cancelar</button>
-                </div>
-                <div class="col-auto">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                      <label class="form-check-label" for="autoSizingCheck">
-                        Recordarme
-                      </label>
-                    </div>
-                </div>
-              </form>
-            </div>
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Inicie Sesión</h5>
+            <form id="loginForm">
+  
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required autofocus>
+                <label for="floatingInputUsername">Usuario</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                <label for="floatingInputEmail">Dirección de correo</label>
+              </div>
+  
+              <hr>
+  
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+  
+              <div class="d-grid mb-2 ses-cancel">
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Iniciar Sesión</button>
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase btn-signup" type="button" id="cancelBtnLogin" >Cancelar</button>
+              </div>
+  
+              <hr class="my-4">
+  
+              <div class="d-grid mb-2">
+                <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                  <i class="fab fa-google me-2"></i>Inicie sesión con Google
+                </button>
+              </div>
+  
+              <div class="d-grid">
+                <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                  <i class="fab fa-facebook-f me-2"></i> Inicie sesión con Facebook
+                </button>
+              </div>
+  
+            </form>
           </div>
-    </section>
-
-    <section class="titulo">
-        <h4>Bienvenidos/as a <br>Melina Foster | Saber en Movimiento</h4><br>
-        <h1>"El yoga nos trae al momento presente,<br>el único lugar donde la vida existe"</h1>
-    </section>
-    <section class="promos">
-        <div class="minititulo">
-            <h4>Enterate de nuestras promociones, todos los días, todos los meses!</h4>
         </div>
-    </section>
-
-    <section id="productos">
-        <div class="imagen">
-            <img src="img/yoga2.jpg" alt="Yoga 1" class="imagen__img1">
-            <h2 class="imagen__titulo">Entrenamiento</h2>
-            <p class="imagen__info"><strong>Configuración de un entorno</strong><br>
-                Un entorno adecuado juega un papel importante. Se puede tener un gran impacto en el cuerpo y la mente durante la asana 
-                que se practica. Puede hacer que la sesión sea fácil o difícil. Puede afectar a la respuesta del cuerpo en las asanas. 
-                También puede afectar la tensión y el estrés de los niveles del cuerpo</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Registrarse -->
+  
+  <div id="signUpModal" class="modal">
+    <div class="row">
+      <span class="close">&times;</span>
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-img-left d-none d-md-flex">
+            <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Registrarse</h5>
+            <form>
+  
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required autofocus>
+                <label for="floatingInputUsername">Usuario</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                <label for="floatingInputEmail">Dirección de correo</label>
+              </div>
+  
+              <hr>
+  
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password">
+                <label for="floatingPasswordConfirm">Confirmar Contraseña</label>
+              </div>
+  
+              <div class="d-grid mb-2 reg-cancel">
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Registrarse</button>
+                <button class="btn btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="button" id="cancelBtnSignup">Cancelar</button>
+              </div>
+    
+  
+              <a class="d-block text-center mt-2 small" href="#">¿ya tenés una cuenta? Iniciá Sesión.</a>
+  
+              <hr class="my-4">
+  
+              <div class="d-grid mb-2">
+                <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                  <i class="fab fa-google me-2"></i> Registrarse con Google
+                </button>
+              </div>
+  
+              <div class="d-grid">
+                <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                  <i class="fab fa-facebook-f me-2"></i> Registrarse con Facebook
+                </button>
+              </div>
+  
+            </form>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="imagen tamaimg">
-            <img src="img/yoga3.jpg" alt="Yoga 2" class="imagen__img2">
-            <h2 class="imagen__titulo">Conciencia</h2>
-            <p class="imagen__info"><strong>Estado físico</strong><br>
-                En primer lugar, no deberías practicar asanas clasicas si sufres de una enfermedad grave. Tampoco si estás muy cansado o 
-                sufriendo fatiga. La práctica de asanas con fatiga puede resultar dañino para los músculos y esto a su vez conduce a 
-                una lesión. Sin embargo, los ejercicios ajustados y suaves pueden tener un efecto bueno en las personas que sufren de 
-                una enfermedad crónica o fatiga, con la supervisión de un profesor cualificado y adecuado.</p>
+  <section class="titulo">
+      <h4>Bienvenidos/as a <br>Melina Foster | Saber en Movimiento</h4><br>
+      <h1>"El yoga nos trae al momento presente,<br>el único lugar donde la vida existe"</h1>
+  </section>
+  <section class="promos">
+      <div class="minititulo">
+          <h4>Enterate de nuestras promociones, todos los días, todos los meses!</h4>
+      </div>
+  </section>
+
+  <section id="productos">
+      <div class="imagen">
+          <img src="img/yoga2.jpg" alt="Yoga 1" class="imagen__img1">
+          <h2 class="imagen__titulo">Entrenamiento</h2>
+          <p class="imagen__info"><strong>Configuración de un entorno</strong><br>
+              Un entorno adecuado juega un papel importante. Se puede tener un gran impacto en el cuerpo y la mente durante la asana 
+              que se practica. Puede hacer que la sesión sea fácil o difícil. Puede afectar a la respuesta del cuerpo en las asanas. 
+              También puede afectar la tensión y el estrés de los niveles del cuerpo</p>
+      </div>
+
+      <div class="imagen tamaimg">
+          <img src="img/yoga3.jpg" alt="Yoga 2" class="imagen__img2">
+          <h2 class="imagen__titulo">Conciencia</h2>
+          <p class="imagen__info"><strong>Estado físico</strong><br>
+              En primer lugar, no deberías practicar asanas clasicas si sufres de una enfermedad grave. Tampoco si estás muy cansado o 
+              sufriendo fatiga. La práctica de asanas con fatiga puede resultar dañino para los músculos y esto a su vez conduce a 
+              una lesión. Sin embargo, los ejercicios ajustados y suaves pueden tener un efecto bueno en las personas que sufren de 
+              una enfermedad crónica o fatiga, con la supervisión de un profesor cualificado y adecuado.</p>
+      </div>
+
+      <div class="imagen tamaimg">
+          <img src="img/yoga4.jpg" alt="Yoga 3" class="imagen__img3">
+          <h2 class="imagen__titulo">Flexibilidad</h2>
+          <p class="imagen__info"><strong>Estado de ánimo</strong><br>
+              De acuerdo con el Maharishi Patanjali, las asanas deben ser practicado con la mente libre de deseo, ansiedad, ira o miedo. 
+              La práctica de asanas cuando la mente está inestable, preocupada, agitada o molesta puede conducir a lesiones. 
+              Para una práctica fructífera debes tener un estado de calma y serenidad de la mente. Debes ser consciente de la 
+              meta de la práctica y el objetivo no debe ser la competencia, la aprobación o la mostración.</p>
+      </div>
+  </section>
+
+  <section class="containersection">
+    <div class="container2">
+        <div class="carousel">
+            <input type="radio" name="slides" checked="checked" id="slide-1">
+            <input type="radio" name="slides" id="slide-2">
+            <input type="radio" name="slides" id="slide-3">
+            <input type="radio" name="slides" id="slide-4">
+            <input type="radio" name="slides" id="slide-5">
+            <input type="radio" name="slides" id="slide-6">
+            <ul class="carousel__slides">
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/carouse18.jpg" alt="">
+                        </div>
+                        <figcaption>
+                          Yoga begins with listening. When we listen, we are giving space to what is.
+                            <span class="credit">Photo: Fabio Buchanan</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/carouse17.jpg" alt="">
+                        </div>
+                        <figcaption>
+                          Yoga means addition – addition of energy, strength and beauty to body, mind and soul.
+                            <span class="credit">Photo: John Doe</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/carouse16.jpg" alt="">
+                        </div>
+                        <figcaption>
+                          Calming the mind is yoga. Not just standing on the head.
+                            <span class="credit">Photo: Fabio Buchanan</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/carousel15.jpg" alt="">
+                        </div>
+                        <figcaption>
+                          If you seek peace, be still. If you seek wisdom, be silent. If you seek love, be yourself.
+                            <span class="credit">Photo: Fabio Buchanan</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/carousel14.jpg" alt="">
+                        </div>
+                        <figcaption>
+                          There is always room for change, but you have to be open to that change.
+                            <span class="credit">Photo: John Doe</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="img/carousel13.jpg" alt="">
+                        </div>
+                        <figcaption>
+                          Yoga is the journey of the self, through the self, to the self.
+                            <span class="credit">Photo: Fabio Buchanan</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>    
+            <ul class="carousel__thumbnails">
+                <li>
+                    <label for="slide-1"><img src="img/carouse18.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-2"><img src="img/carouse17.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-3"><img src="img/carouse16.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-4"><img src="img/carousel15.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-5"><img src="img/carousel14.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-6"><img src="img/carousel13.jpg" alt=""></label>
+                </li>
+            </ul>
         </div>
+    </div>
+</section>
 
-        <div class="imagen tamaimg">
-            <img src="img/yoga4.jpg" alt="Yoga 3" class="imagen__img3">
-            <h2 class="imagen__titulo">Flexibilidad</h2>
-            <p class="imagen__info"><strong>Estado de ánimo</strong><br>
-                De acuerdo con el Maharishi Patanjali, las asanas deben ser practicado con la mente libre de deseo, ansiedad, ira o miedo. 
-                La práctica de asanas cuando la mente está inestable, preocupada, agitada o molesta puede conducir a lesiones. 
-                Para una práctica fructífera debes tener un estado de calma y serenidad de la mente. Debes ser consciente de la 
-                meta de la práctica y el objetivo no debe ser la competencia, la aprobación o la mostración.</p>
-        </div>
-    </section>
-
-    <section class="containersection">
-      <div class="container2">
-          <div class="carousel">
-              <input type="radio" name="slides" checked="checked" id="slide-1">
-              <input type="radio" name="slides" id="slide-2">
-              <input type="radio" name="slides" id="slide-3">
-              <input type="radio" name="slides" id="slide-4">
-              <input type="radio" name="slides" id="slide-5">
-              <input type="radio" name="slides" id="slide-6">
-              <ul class="carousel__slides">
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="img/carouse18.jpg" alt="">
-                          </div>
-                          <figcaption>
-                            Yoga begins with listening. When we listen, we are giving space to what is.
-                              <span class="credit">Photo: Fabio Buchanan</span>
-                          </figcaption>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="img/carouse17.jpg" alt="">
-                          </div>
-                          <figcaption>
-                            Yoga means addition – addition of energy, strength and beauty to body, mind and soul.
-                              <span class="credit">Photo: John Doe</span>                            
-                          </figcaption>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="img/carouse16.jpg" alt="">
-                          </div>
-                          <figcaption>
-                            Calming the mind is yoga. Not just standing on the head.
-                              <span class="credit">Photo: Fabio Buchanan</span>                            
-                          </figcaption>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="img/carousel15.jpg" alt="">
-                          </div>
-                          <figcaption>
-                            If you seek peace, be still. If you seek wisdom, be silent. If you seek love, be yourself.
-                              <span class="credit">Photo: Fabio Buchanan</span>                            
-                          </figcaption>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="img/carousel14.jpg" alt="">
-                          </div>
-                          <figcaption>
-                            There is always room for change, but you have to be open to that change.
-                              <span class="credit">Photo: John Doe</span>                            
-                          </figcaption>
-                      </figure>
-                  </li>
-                  <li class="carousel__slide">
-                      <figure>
-                          <div>
-                              <img src="img/carousel13.jpg" alt="">
-                          </div>
-                          <figcaption>
-                            Yoga is the journey of the self, through the self, to the self.
-                              <span class="credit">Photo: Fabio Buchanan</span>                            
-                          </figcaption>
-                      </figure>
-                  </li>
-              </ul>    
-              <ul class="carousel__thumbnails">
-                  <li>
-                      <label for="slide-1"><img src="img/carouse18.jpg" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-2"><img src="img/carouse17.jpg" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-3"><img src="img/carouse16.jpg" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-4"><img src="img/carousel15.jpg" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-5"><img src="img/carousel14.jpg" alt=""></label>
-                  </li>
-                  <li>
-                      <label for="slide-6"><img src="img/carousel13.jpg" alt=""></label>
-                  </li>
-              </ul>
+  <section class="titulo2">
+      <div class="titulo2__titulos">
+          <div class="titulo2__titulos__1">
+              <h1>¿Por qué elegirnos?</h1>
+          </div>
+          <div class="titulo2__titulos__2">
+              <h1>Con <strong> Melina Foster | Saber en Movimiento</strong> obtenés todo lo necesario<br>
+              para tu práctica diaria.</h1>
+          </div>
+      </div>
+      
+      <div class="iconos container">
+          <div class="iconos__contenido1">
+              <img src="img/clasesnuevascadasemana.png" alt="">
+              <p>Clases regulares, presenciales y virtuales.<br> Encontrá la que te quede más cómodo.</p>
+          </div>
+          <div class="iconos__contenido2">
+              <img src="img/videos.png" alt="">
+              <p>Cada semana una nueva clase.<br> Disponible en todas las plataformas.</p>
+          </div>
+          <div class="iconos__contenido3">
+              <img src="img/dejanostucomentarioysugerencia.png" alt="">
+              <p>Dejanos tus comentarios y sugerencias.<br> ¿Qué clase te gustaría hacer?</p>
+          </div>
+          <div class="iconos__contenido4">
+              <img src="img/cellapp.png" alt="">
+              <p>¡Próximamente nuestra propia<br>aplicación para el celular!</p>
+          </div>
+          <div class="iconos__contenido5">
+              <img src="img/vivos.png" alt="">
+              <p>No te pierdas de nuestras clases en vivo.</p>
           </div>
       </div>
   </section>
 
-    <section class="titulo2">
-        <div class="titulo2__titulos">
-            <div class="titulo2__titulos__1">
-                <h1>¿Por qué elegirnos?</h1>
-            </div>
-            <div class="titulo2__titulos__2">
-                <h1>Con <strong> Melina Foster | Saber en Movimiento</strong> obtenés todo lo necesario<br>
-                para tu práctica diaria.</h1>
-            </div>
-        </div>
-        
-        <div class="iconos container">
-            <div class="iconos__contenido1">
-                <img src="img/clasesnuevascadasemana.png" alt="">
-                <p>Clases regulares, presenciales y virtuales.<br> Encontrá la que te quede más cómodo.</p>
-            </div>
-            <div class="iconos__contenido2">
-                <img src="img/videos.png" alt="">
-                <p>Cada semana una nueva clase.<br> Disponible en todas las plataformas.</p>
-            </div>
-            <div class="iconos__contenido3">
-                <img src="img/dejanostucomentarioysugerencia.png" alt="">
-                <p>Dejanos tus comentarios y sugerencias.<br> ¿Qué clase te gustaría hacer?</p>
-            </div>
-            <div class="iconos__contenido4">
-                <img src="img/cellapp.png" alt="">
-                <p>¡Próximamente nuestra propia<br>aplicación para el celular!</p>
-            </div>
-            <div class="iconos__contenido5">
-                <img src="img/vivos.png" alt="">
-                <p>No te pierdas de nuestras clases en vivo.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="acerca-denosotros">
-        <div class="acerca-denosotros__titulo">
-            <h1>Acerca de Melina Foster | Saber en Movimiento</h1>
-        </div>
-        <div class="acerca-denosotros__texto">
-            <p>Lorem, ipsum dolor sit <strong> amet consectetur adipisicing elit</strong>. Recusandae vero sit tenetur 
-                voluptatibus voluptatem dignissimos asperiores exercitationem voluptatum, hic ducimus? 
-                Consequatur corrupti praesentium <strong>hic illo</strong> est quam ab ex! Ullam.</p>
-        </div>
-        <div class="acerca-denosotros__video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zYc5B7Kw38g" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-            encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </section> 
-
-
-    <footer id="footer">
-      <div class="footer">  
-        <h4>Melina Foster</h4>
-        <h5>Saber en Movimiento</h5>
-      </div> 
-      <div class="footer2">
-        <h5>Todos los derechos reservados ®</h5>
+  <section id="acerca-denosotros">
+      <div class="acerca-denosotros__titulo">
+          <h1>Acerca de Melina Foster | Saber en Movimiento</h1>
       </div>
-      <div class="parrafo">
-        <p>melinaluciafoster@gmail.com</p>
+      <div class="acerca-denosotros__texto">
+          <p>Lorem, ipsum dolor sit <strong> amet consectetur adipisicing elit</strong>. Recusandae vero sit tenetur 
+              voluptatibus voluptatem dignissimos asperiores exercitationem voluptatum, hic ducimus? 
+              Consequatur corrupti praesentium <strong>hic illo</strong> est quam ab ex! Ullam.</p>
       </div>
-      
-      <ul class="wrapper">
-        <li class="icon facebook">
-            <a href="https://www.facebook.com/melina.foster" target="_blank"><img src="img/facebook.png" alt=""></a>
-          <span class="tooltip">Facebook</span>
-          <span><i class="fab fa-facebook-f"></i></span>
-        </li>
-        <li class="icon twitter">
-            <img src="img/twiter.png" alt="">
-          <span class="tooltip">Twitter</span>
-          <span><i class="fab fa-twitter"></i></span>
-        </li>
-        <li class="icon instagram">
-            <a href="https://www.instagram.com/melin_fost/" target="_blank"><img src="img/instagram.png" alt=""></a>
-          <span class="tooltip">Instagram</span>
-          <span><i class="fab fa-instagram"></i></span>
-        </li>
-        <li class="icon youtube">
-           <a href="https://www.youtube.com/@melinafoster6915" target="_blank"><img src="img/youtube.png" alt=""></a>
-          <span class="tooltip">Youtube</span>
-          <span><i class="fab fa-youtube"></i></span>
-        </li>
-      </ul>
-    </footer>
+      <div class="acerca-denosotros__video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/zYc5B7Kw38g" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+          encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  </section> 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
-    crossorigin="anonymous"></script>
+  </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/register.js"></script>
+  <div class="container">
+    <form style="width: 22rem;">
+      <h3>Suscribite a nuestro Newsletter</h3>
+      <!-- Name input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="text" id="form5Example1" class="form-control" />
+        <label class="form-label" for="form5Example1">Nombre</label>
+      </div>
+    
+     
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="email" id="form5Example2" class="form-control" />
+        <label class="form-label" for="form5Example2">Dirección de correo</label>
+      </div>
+    
+      <div class="d-flex align-items-center justify-content-center">
+        <button data-mdb-ripple-init type="button" class="col btn btn-primary btn-block mb-4">suscribirse</button>
+        </div>
+      </div>
+    
+    </form>
+
+  </div>
+
+
+  <footer id="footer">
+    <div class="footer">  
+      <h4>Melina Foster</h4>
+      <h5>Saber en Movimiento</h5>
+    </div> 
+    <div class="footer2">
+      <h5>Todos los derechos reservados ®</h5>
+    </div>
+    <div class="parrafo">
+      <p>melinaluciafoster@gmail.com</p>
+    </div>
+    
+    <ul class="wrapper">
+      <li class="icon facebook">
+          <a href="https://www.facebook.com/melina.foster" target="_blank"><img src="img/facebook.png" alt=""></a>
+        <span class="tooltip">Facebook</span>
+        <span><i class="fab fa-facebook-f"></i></span>
+      </li>
+      <li class="icon twitter">
+          <img src="img/twiter.png" alt="">
+        <span class="tooltip">Twitter</span>
+        <span><i class="fab fa-twitter"></i></span>
+      </li>
+      <li class="icon instagram">
+          <a href="https://www.instagram.com/melin_fost/" target="_blank"><img src="img/instagram.png" alt=""></a>
+        <span class="tooltip">Instagram</span>
+        <span><i class="fab fa-instagram"></i></span>
+      </li>
+      <li class="icon youtube">
+         <a href="https://www.youtube.com/@melinafoster6915" target="_blank"><img src="img/youtube.png" alt=""></a>
+        <span class="tooltip">Youtube</span>
+        <span><i class="fab fa-youtube"></i></span>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+  crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/registrarse.js"></script>
+  <script src="js/suscribirse.js"></script>
 
 </body>
 </html>
