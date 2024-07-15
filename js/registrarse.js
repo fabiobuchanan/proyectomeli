@@ -8,9 +8,14 @@ function showSignUpModal() {
     document.getElementById("signUpModal").style.display = "none";
   }
   
-  // Event listener for the login button in the header
   const signUp = document.getElementById("signInputBtn");
   signUp.addEventListener("click", function () {
+    showSignUpModal();
+  });
+
+  // REGISTER Formulario
+  const regForm = document.getElementById("reg-form");
+  regForm.addEventListener("click", function () {
     showSignUpModal();
   });
   

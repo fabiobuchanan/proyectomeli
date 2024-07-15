@@ -103,6 +103,7 @@
 .menu__ul li a {
   color: aliceblue;
   text-decoration: none;
+  font-size: larger;
   font-weight: 450;
 }
 
@@ -117,8 +118,8 @@ li:hover {
 }
 
 .titulo {
-  height: 100vh;
-  background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 0, 0.5)),
+  height: 100%;
+  background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.719)),
     url("../img/MeliYoga4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -783,7 +784,7 @@ li:hover {
   font-size: 1.3rem;
   padding-top: 4rem;
   padding-bottom: 3rem;
-  background: #4e84ca;
+  background: 	#c9d3ce;
 }
 #acerca-denosotros .acerca-denosotros__texto {
   text-align: center;
@@ -793,7 +794,7 @@ li:hover {
 
 #acerca-denosotros .acerca-denosotros__titulo {
   text-align: center;
-  color:#ffa500;
+  color: #bb493c;
 }
 #acerca-denosotros .acerca-denosotros__titulo {
   grid-area: titulo3;
@@ -1431,15 +1432,10 @@ li:hover {
   margin: 4rem 4rem;
 }
 #formulario .formulario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: -webkit-linear-gradient(to right, #cc54339a, #23074d93);
-  background: linear-gradient(to right, #cc5433a1, #23074d7c);
+  max-width: 50%;
   margin: auto;
-  width: 90%;
-  max-width: 400px;
-  padding: 3rem;
+  width:100%;
+ 
   border-radius: 10px;
   box-shadow: 0 5px 10px -5px black;
   gap: 1rem;
@@ -1455,10 +1451,9 @@ li:hover {
 #formulario .formulario .formulario__cajas {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 #formulario .formulario .formulario__cajas label {
-  text-align: center;
+  
   display: block;
   font-size: 1rem;
 }
@@ -1469,7 +1464,6 @@ li:hover {
 #formulario .formulario .comentarios-btns {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 #formulario .formulario p,
@@ -1538,6 +1532,13 @@ input[type="submit"]:hover,
 
 /* Suscribirse ---------------------------------------------------------------------------------------------------*/
 
+
+.formulario-suscripcion {
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #eb8f65;
+  border-radius: 25px;
+}
 
 /*LOGO ---------------------------------------------------------------------------------------------------*/
 .logo img {

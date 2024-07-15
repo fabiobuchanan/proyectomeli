@@ -94,7 +94,6 @@
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
           <div class="card-img-left d-none d-md-flex">
-            <!-- Background image for card set in CSS! -->
           </div>
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Inicie Sesión</h5>
@@ -151,7 +150,6 @@
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
           <div class="card-img-left d-none d-md-flex">
-            <!-- Background image for card set in CSS! -->
           </div>
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Registrarse</h5>
@@ -220,7 +218,9 @@
 
   <section id="productos">
       <div class="imagen">
+        <a href="pages/clases.html">
           <img src="img/yoga2.jpg" alt="Yoga 1" class="imagen__img1">
+        </a>
           <h2 class="imagen__titulo">Entrenamiento</h2>
           <p class="imagen__info"><strong>Configuración de un entorno</strong><br>
               Un entorno adecuado juega un papel importante. Se puede tener un gran impacto en el cuerpo y la mente durante la asana 
@@ -229,7 +229,9 @@
       </div>
 
       <div class="imagen tamaimg">
+        <a href="pages/clases.html"> 
           <img src="img/yoga3.jpg" alt="Yoga 2" class="imagen__img2">
+        </a>
           <h2 class="imagen__titulo">Conciencia</h2>
           <p class="imagen__info"><strong>Estado físico</strong><br>
               En primer lugar, no deberías practicar asanas clasicas si sufres de una enfermedad grave. Tampoco si estás muy cansado o 
@@ -239,7 +241,9 @@
       </div>
 
       <div class="imagen tamaimg">
+        <a href="pages/clases.html">
           <img src="img/yoga4.jpg" alt="Yoga 3" class="imagen__img3">
+        </a>
           <h2 class="imagen__titulo">Flexibilidad</h2>
           <p class="imagen__info"><strong>Estado de ánimo</strong><br>
               De acuerdo con el Maharishi Patanjali, las asanas deben ser practicado con la mente libre de deseo, ansiedad, ira o miedo. 
@@ -404,8 +408,8 @@
   </div>
 
   <div class="container">
-    <form style="width: 22rem;">
-      <h3>Suscribite a nuestro Newsletter</h3>
+    <form class="d-flex container align-self-center formulario-suscripcion">
+      <h3 class="align-self-center">Suscribite a nuestro <br>Newsletter</h3>
       <!-- Name input -->
       <div data-mdb-input-init class="form-outline mb-4">
         <input type="text" id="form5Example1" class="form-control" />
@@ -419,7 +423,7 @@
       </div>
     
       <div class="d-flex align-items-center justify-content-center">
-        <button data-mdb-ripple-init type="button" class="col btn btn-primary btn-block mb-4">suscribirse</button>
+        <button data-mdb-ripple-init type="button" class="btn btn-warning btn-block mb-4"><strong>suscribirse</strong></button>
         </div>
       </div>
     

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/loginyregistro.css">
     <meta name="keywords" content="yoga, movimiento, movement, conciencia">
     <link rel="icon" href="../img/Icono1.png">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -40,6 +41,9 @@
                     <li id="cursos2">
                         <a href="miscursos.html">Mis cursos</a>
                     </li>
+                    <li id="cargasAdmin">
+                      <a href="/pages/admincargas.html">Mis cargas</a>
+                  </li>
                     <li>
                         <button id="logInputBtn" class="btn btn-primary">Log in</button>
                     </li>
@@ -77,70 +81,129 @@
     </header> 
       </main>
 
-      <section id="login">
-        <div id="loginModal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <h2>Login</h2>
-              <form id="loginForm">
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" required><br>
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password" required><br><br>
-                <button class="btn btn-primary" type="submit">Login</button>
-                <button class="btn btn-primary" type="button" id="cancelBtnLogin">Cancel</button>
-                <div class="col-auto">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                      <label class="form-check-label" for="autoSizingCheck">
-                        Remember me
-                      </label>
-                    </div>
-                </div>
-              </form>
-              <p id="message"></p>
+      <div id="loginModal" class="modal">
+        <div class="row">
+          <span class="close">&times;</span>
+          <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+              <div class="card-img-left d-none d-md-flex">
+                <!-- Background image for card set in CSS! -->
+              </div>
+              <div class="card-body p-4 p-sm-5">
+                <h5 class="card-title text-center mb-5 fw-light fs-5">Inicie Sesión</h5>
+                <form id="loginForm">
+      
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required autofocus>
+                    <label for="floatingInputUsername">Usuario</label>
+                  </div>
+      
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                    <label for="floatingInputEmail">Dirección de correo</label>
+                  </div>
+      
+                  <hr>
+      
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                  </div>
+      
+                  <div class="d-grid mb-2 ses-cancel">
+                    <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Iniciar Sesión</button>
+                    <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase btn-signup" type="button" id="cancelBtnLogin" >Cancelar</button>
+                  </div>
+      
+                  <hr class="my-4">
+      
+                  <div class="d-grid mb-2">
+                    <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                      <i class="fab fa-google me-2"></i>Inicie sesión con Google
+                    </button>
+                  </div>
+      
+                  <div class="d-grid">
+                    <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                      <i class="fab fa-facebook-f me-2"></i> Inicie sesión con Facebook
+                    </button>
+                  </div>
+      
+                </form>
+              </div>
             </div>
           </div>
-    </section>
-
-    <section id="signUp">
-        <div id="signUpModal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <h2>Register</h2>
-              <form id="signUp">
-                <label for="name">Name:</label><br>
-                <input type="text" id=" name" name="name" required><br>
-                <label for="username">Last Name:</label><br>
-                <input type="text" id="lastname" name="lastname" required><br>
-                <label for="username">Username:</label><br>
-                <input type="text" id="username" name="username" required><br>
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" required><br>
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password" required><br><br>
-                <label for="confirmpassword">Confirm Password:</label><br>
-                <input type="text" id="confirmpassword" name="confirmpassword" required><br>
-                <button class="btn btn-primary" type="submit">Login</button>
-                <button class="btn btn-primary" type="button" id="cancelBtnSignup">Cancel</button>
-                <div class="col-auto">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                      <label class="form-check-label" for="autoSizingCheck">
-                        Remember me
-                      </label>
-                    </div>
-                </div>
-              </form>
-              <p id="message"></p>
+        </div>
+      </div>
+      
+      <!-- Registrarse -->
+      
+      <div id="signUpModal" class="modal">
+        <div class="row">
+          <span class="close">&times;</span>
+          <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+              <div class="card-img-left d-none d-md-flex">
+                <!-- Background image for card set in CSS! -->
+              </div>
+              <div class="card-body p-4 p-sm-5">
+                <h5 class="card-title text-center mb-5 fw-light fs-5">Registrarse</h5>
+                <form>
+      
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required autofocus>
+                    <label for="floatingInputUsername">Usuario</label>
+                  </div>
+      
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                    <label for="floatingInputEmail">Dirección de correo</label>
+                  </div>
+      
+                  <hr>
+      
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Contraseña</label>
+                  </div>
+      
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password">
+                    <label for="floatingPasswordConfirm">Confirmar Contraseña</label>
+                  </div>
+      
+                  <div class="d-grid mb-2 reg-cancel">
+                    <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Registrarse</button>
+                    <button class="btn btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="button" id="cancelBtnSignup">Cancelar</button>
+                  </div>
+        
+      
+                  <a class="d-block text-center mt-2 small" href="#">¿ya tenés una cuenta? Iniciá Sesión.</a>
+      
+                  <hr class="my-4">
+      
+                  <div class="d-grid mb-2">
+                    <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                      <i class="fab fa-google me-2"></i> Registrarse con Google
+                    </button>
+                  </div>
+      
+                  <div class="d-grid">
+                    <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                      <i class="fab fa-facebook-f me-2"></i> Registrarse con Facebook
+                    </button>
+                  </div>
+      
+                </form>
+              </div>
             </div>
           </div>
-    </section>
-    
+        </div>
+      </div>
     <section id="formulario">
             <form class="formulario">
                 <h2 class="formulario__titulo"><strong>Contactanos</strong></h2>
-                <p class="formulario_texto">¿No tenés una cuenta? <a href="#" class="formulario__link">Regístrate</a></p>
+                <p class="formulario_texto">¿No tenés una cuenta? <a href="#" id="reg-form" class="formulario__link">Regístrate</a></p>
                     <legend>Ingresá tus datos:</legend>
                     <div class="formulario__cajas">
                         <label for="nombre-apellido" class="text">Nombre y Apellido</label>
@@ -186,20 +249,10 @@
               <span class="tooltip">Facebook</span>
               <span><i class="fab fa-facebook-f"></i></span>
             </li>
-            <li class="icon twitter">
-                <img src="../img/twiter.png" alt="">
-              <span class="tooltip">Twitter</span>
-              <span><i class="fab fa-twitter"></i></span>
-            </li>
             <li class="icon instagram">
                 <a href="https://www.instagram.com/melin_fost/" target="_blank"><img src="../img/instagram.png" alt=""></a>
               <span class="tooltip">Instagram</span>
               <span><i class="fab fa-instagram"></i></span>
-            </li>
-            <li class="icon github">
-                <img src="../img/github.png" alt="">
-              <span class="tooltip">Github</span>
-              <span><i class="fab fa-github"></i></span>
             </li>
             <li class="icon youtube">
                <a href="https://www.youtube.com/@melinafoster6915" target="_blank"><img src="../img/youtube.png" alt=""></a>
@@ -216,6 +269,7 @@
       <script src="../js/main.js"></script>
       <script src="../js/login.js"></script>
       <script src="../js/registrarse.js"></script>
+      <script src="../js/suscribirse.js"></script>
 
 </body>
 </html>
