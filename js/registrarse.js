@@ -1,31 +1,31 @@
 // REGISTER
 
-function showSignUpModal() {
-    document.getElementById("signUpModal").style.display = "block";
+function showSignupModal() {
+    document.getElementById("signupModal").style.display = "block";
   }
   
-  function hideSignUpModal() {
-    document.getElementById("signUpModal").style.display = "none";
+function hideSignupModal() {
+    document.getElementById("signupModal").style.display = "none";
   }
   
   const signUp = document.getElementById("signInputBtn");
   signUp.addEventListener("click", function () {
-    showSignUpModal();
+    showSignupModal();
   });
 
   // REGISTER Formulario
   const regForm = document.getElementById("reg-form");
   regForm.addEventListener("click", function () {
-    showSignUpModal();
+    showSignupModal();
   });
   
   // Event listener for the close button within the modal
   document.querySelector(".close").addEventListener("click", function () {
-    hideSignUpModal();
+    hideSignupModal();
   });
 
   document.getElementById("cancelBtnSignup").addEventListener("click", function () {
-    hideLoginModal();
+    hideSignupModal();
   });
 
   
@@ -33,7 +33,7 @@ function showSignUpModal() {
   window.addEventListener("click", function (event) {
     let modalRegister = document.getElementById("signUpModal");
     if (event.target == modalRegister) {
-      hideSignUpModal();
+      hideSignupModal();
     }
   });
   
@@ -41,7 +41,7 @@ function showSignUpModal() {
   document
     .getElementById("cancelBtnSignup")
     .addEventListener("click", function () {
-      hideSignUpModal();
+      hideSignupModal();
     });
   
   // Event listener for the login form submission
@@ -80,7 +80,7 @@ function showSignUpModal() {
         .then((data) => {
           if (data.success) {
             document.getElementById("message").textContent = "Login successful!";
-            hideSignUpModal();
+            hideSignupModal();
           } else {
             document.getElementById("message").textContent =
               "Invalid username or password. Please try again.";
