@@ -6,7 +6,11 @@
 }
 
 .form-cargas-admin {
-    height: 50%;
+    height: 100%;
     width: 100%;
-    margin-bottom: 0;
+    padding-top: 50px;
+}
+
+.tituloForm h3 {
+    margin-bottom: 2rem;
 }

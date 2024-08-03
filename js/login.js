@@ -8,7 +8,6 @@
     document.getElementById("loginModal").style.display = "none";
   }
 
-
   function cerrarModal() {
     const modal = document.getElementById("loginModal");
     modal.style.display = "none";
@@ -31,13 +30,10 @@
     }
 }
 
-  
   // Event listener for the cancel button within the modal
   document.getElementById("cancelBtnLogin").addEventListener("click", function () {
       hideLoginModal();
     });
-
-
   
   // LOGIN 
   document.getElementById("loginForm").addEventListener("submit", function (event) {

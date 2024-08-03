@@ -8,6 +8,7 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/loginyregistro.css">
+    <link rel="stylesheet" href="../css/clases.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="icon" href="../img/Icono1.png">
     <meta name="keywords" content="yoga, inicio, home, homepage, movimiento, movement, conciencia">
@@ -71,11 +72,12 @@
                   </a>
               </div>
               <div class="logo2">
-                  <a href="index.html">
-                      <img src="img/logofinaltransparente.png" alt="" class="logo2Img">
+                  <a href="../index.html">
+                      <img src="../img/logofinaltransparente.png" alt="" class="logo2Img">
                   </a>
               </div>
       </div>
+      
           <section id="wave">
               <div class="wave" style="height: 150px; overflow: hidden;">
                   <svg viewBox="0 0 500 150" preserveAspectRatio="none"
@@ -89,21 +91,146 @@
       </header> 
   </main>
 
-  <section class="form-cargas-admin">
-  <form id="formularioAdmin">
-    <div class="row mb-2">
+  <div id="loginModal" class="modal">
+    <div class="row">
+      <span class="close">&times;</span>
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-img-left d-none d-md-flex">
+          </div>
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Inicie Sesión</h5>
+            <form id="loginForm">
   
-    <div data-mdb-input-init class="form-outline mb-4">
-      <input type="file" id="file" />
-      <label class="form-label" for="form6Example3">Seleccione el archivo</label>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputUsername" placeholder="myusername" required autofocus>
+                <label for="floatingInputUsername">Usuario</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                <label for="floatingInputEmail">Dirección de correo</label>
+              </div>
+  
+              <hr>
+  
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+  
+              <div class="d-grid mb-2 ses-cancel">
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Iniciar Sesión</button>
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase btn-signup" type="button" id="cancelBtnLogin" >Cancelar</button>
+              </div>
+  
+              <hr class="my-4">
+  
+              <div class="d-grid mb-2">
+                <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                  <i class="fab fa-google me-2"></i>Inicie sesión con Google
+                </button>
+              </div>
+  
+              <div class="d-grid">
+                <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                  <i class="fab fa-facebook-f me-2"></i> Inicie sesión con Facebook
+                </button>
+              </div>
+  
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  
+  <!-- Registrarse -->
+  
+  <div id="signupModal" class="modal">
+    <div class="row">
+      <span class="close">&times;</span>
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-img-left d-none d-md-flex">
+            <!-- Background image for card set in CSS! -->
+          </div>
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Registrarse</h5>
+            <form>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                <label for="floatingInputEmail">Dirección de correo</label>
+              </div>
+  
+              <hr>
+  
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password">
+                <label for="floatingPasswordConfirm">Confirmar Contraseña</label>
+              </div>
+  
+              <div class="d-grid mb-2 reg-cancel">
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Registrarse</button>
+                <button class="btn btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="button" id="cancelBtnSignup">Cancelar</button>
+              </div>
+    
+  
+              <a class="d-block text-center mt-2 small" href="#">¿ya tenés una cuenta? Iniciá Sesión.</a>
+  
+              <hr class="my-4">
+  
+              <div class="d-grid mb-2">
+                <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                  <i class="fab fa-google me-2"></i> Registrarse con Google
+                </button>
+              </div>
+  
+              <div class="d-grid">
+                <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                  <i class="fab fa-facebook-f me-2"></i> Registrarse con Facebook
+                </button>
+              </div>
+  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="container form-cargas-admin">
+  <form id="formularioAdmin">
+    <div class="row mb-2 text-center tituloForm">
+      <h3>Carga de clases y cursos</h3>
   
     <div data-mdb-input-init class="form-outline mb-4">
-      <input type="text" id="descripcion" placeholder="Descripción del archivo" />
-      <label class="form-label" for="form6Example4">Nombre del archivo</label>
+      <input type="text" id="descripcion" placeholder="ID del video" />
+      <label class="form-label" for="form6Example3">ID del archivo</label>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block mb-4">Subir</button>
+    <div data-mdb-input-init class="form-outline mb-4">
+      <input type="text" id="descripcion" placeholder="Nombre del video" />
+      <label class="form-label" for="form6Example3">Nombre del video</label>
+    </div>
+  
+    <div data-mdb-input-init class="form-outline mb-4">
+      <input type="text" id="descripcion" placeholder="Descripción del video" />
+      <label class="form-label" for="form6Example4">Descripción del video</label>
+    </div>
+
+    <div data-mdb-input-init class="form-outline mb-4">
+      <input type="text" id="descripcion" placeholder="URL del video" />
+      <label class="form-label" for="form6Example4">URL del video</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block mb-4" id="enviarSubir">Enviar y Subir</button>
   </form>
   </section>
 
@@ -143,9 +270,11 @@
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
   crossorigin="anonymous"></script>
 
-  <script src="js/main.js"></script>
-  <script src="js/login.js"></script>
-  <script src="js/registrarse.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/registrarse.js"></script>
   <script src="../js/admincargas.js"></script>
+  <script src="../js/getcargasservidor.js"></script>
+  <script src="../js/sendcargasservidor.js"></script>
 
 </body>

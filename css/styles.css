@@ -162,11 +162,6 @@ li:hover {
   top: 0;
   height: 100px;
   background-color: #ffff;
-  /*
-  background: #23074d;
-  background: #c31432;
-  background: -webkit-linear-gradient(to right, #b3606eaf, #240b3675);
-  background: linear-gradient(to right, #ac6c7783, #13051dab); */
 }
 
 .sticky .logo {
@@ -1639,4 +1634,10 @@ h5 {
 .wrapper .youtube:hover .tooltip::before {
   background: #cd201f;
   color: #ffffff;
+}
+
+/* SUSCRIPCION FORMULARIO ----------------------------------------------------------------------------------*/
+
+.formSuscripcion {
+  margin-bottom: 2rem;
 }
