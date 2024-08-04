@@ -1,11 +1,109 @@
-const videoData = [
-    { id: 1, nombre: 'Video 1', descripcion: 'Descripción del Video 1', url: 'https://www.youtube.com/embed/video_id_1' },
-    { id: 2, nombre: 'Video 2', descripcion: 'Descripción del Video 2', url: 'https://www.youtube.com/embed/video_id_2' },
-    { id: 3, nombre: 'Video 3', descripcion: 'Descripción del Video 3', url: 'https://www.youtube.com/embed/video_id_3' },
-    { id: 4, nombre: 'Video 4', descripcion: 'Descripción del Video 4', url: 'https://www.youtube.com/embed/video_id_4' }
-]
+document.getElementById('videoForm').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const id = document.getElementById('videoId').value;
+    const nombre = document.getElementById('nombre').value;
+    const descripcion = document.getElementById('descripcion').value;
+    const url = document.getElementById('url').value;
 
-document.getElementById('enviarSubir').addEventListener('click', () => {
+    const videoData = { nombre, descripcion, url };
+
+    if (id) {
+        // Update video
+        fetch(`/videos/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(videoData)
+        })
+        .then(response => response.json())
+        .then(video => {
+            console.log('Video actualizado:', video);
+            loadVideos();
+        })
+        .catch(error => console.error('Error actualizando video:', error));
+    } else {
+        // Create new video
+        fetch('/videos', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(videoData)
+        })
+        .then(response => response.json())
+        .then(video => {
+            console.log('Video creado:', video);
+            loadVideos();
+        })
+        .catch(error => console.error('Error creando video:', error));
+    }
+
+    // Reset form
+    document.getElementById('videoForm').reset();
+    document.getElementById('videoId').value = '';
+});
+
+document.getElementById('loadVideos').addEventListener('click', loadVideos);
+
+function loadVideos() {
+    fetch('/videos')
+    .then(response => response.json())
+    .then(data => {
+        const videosContainer = document.getElementById('videos');
+        videosContainer.innerHTML = '';
+        data.forEach(video => {
+            const videoContainer = document.createElement('div');
+            videoContainer.className = 'video-container';
+            
+            const videoTitle = document.createElement('h2');
+            videoTitle.textContent = video.nombre;
+            const videoDescription = document.createElement('p');
+            videoDescription.textContent = video.descripcion;
+            
+            const iframe = document.createElement('iframe');
+            iframe.width = '560';
+            iframe.height = '315';
+            iframe.src = video.url;
+            iframe.frameBorder = '0';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            
+            const updateButton = document.createElement('button');
+            updateButton.textContent = 'Editar';
+            updateButton.addEventListener('click', () => {
+                document.getElementById('videoId').value = video.id;
+                document.getElementById('nombre').value = video.nombre;
+                document.getElementById('descripcion').value = video.descripcion;
+                document.getElementById('url').value = video.url;
+            });
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Eliminar';
+            deleteButton.addEventListener('click', () => {
+                fetch(`/videos/${video.id}`, { method: 'DELETE' })
+                .then(response => response.json())
+                .then(() => {
+                    console.log('Video eliminado');
+                    loadVideos();
+                })
+                .catch(error => console.error('Error eliminando video:', error));
+            });
+
+            videoContainer.appendChild(videoTitle);
+            videoContainer.appendChild(videoDescription);
+            videoContainer.appendChild(iframe);
+            videoContainer.appendChild(updateButton);
+            videoContainer.appendChild(deleteButton);
+            
+            videosContainer.appendChild(videoContainer);
+        });
+    })
+    .catch(error => console.error('Error cargando videos:', error));
+}
+
+
+
+
+
+
+/* document.getElementById('enviarSubir').addEventListener('click', () => {
     // Realizar la solicitud POST al servidor para enviar el array de objetos
     fetch('/save_videos', {
         method: 'POST',
@@ -19,4 +117,4 @@ document.getElementById('enviarSubir').addEventListener('click', () => {
         console.log('Respuesta del servidor:', data);
     })
     .catch(error => console.error('Error enviando videos:', error));
-});
+});*/

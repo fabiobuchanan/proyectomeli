@@ -55,7 +55,7 @@
                           <a href="admincargas.html">Mis cargas</a>
                       </li>
                       <li>
-                        <button id="logInputBtn" class="btn btn-primary">Login</button>
+                        <button id="logInputBtn" class="btn btn-primary logInputBtn">Iniciar Sesión</button>
                     </li>
                     <li>
                         <button id="signInputBtn" class="btn btn-primary">Registrarse</button>
@@ -204,6 +204,20 @@
     </div>
   </div>
 
+  <h1>Gestión de Videos</h1>
+  <form id="videoForm">
+      <input type="hidden" id="videoId" />
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required />
+      <label for="descripcion">Descripción:</label>
+      <input type="text" id="descripcion" required />
+      <label for="url">URL:</label>
+      <input type="text" id="url" required />
+      <button type="submit">Guardar Video</button>
+  </form>
+  <button id="loadVideos">Cargar Videos</button>
+  <div id="videos"></div>
+
 
   <section class="container form-cargas-admin">
   <form id="formularioAdmin">
@@ -274,7 +288,6 @@
   <script src="../js/login.js"></script>
   <script src="../js/registrarse.js"></script>
   <script src="../js/admincargas.js"></script>
-  <script src="../js/getcargasservidor.js"></script>
   <script src="../js/sendcargasservidor.js"></script>
 
 </body>

@@ -155,6 +155,10 @@ li:hover {
   width: 100%;
 }
 
+#menu-fixed .logInputBtn {
+  width: 150px;
+}
+
 .sticky {
   display: flex;
   justify-content: space-between;
@@ -195,7 +199,7 @@ li:hover {
   padding: 4px;
   border-color:#23074d;
   height: 35px;
-  width: 60px;
+  width: 150px;
 }
 
 .sticky #signInputBtn {
