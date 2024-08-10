@@ -1,0 +1,23 @@
+
+.cursosCards {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.row1, .row2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row1 .card img{
+    margin-top: 1rem;
+}
+
+.row2 .card img{
+    margin-top: 1rem;
+}

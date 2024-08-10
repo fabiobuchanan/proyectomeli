@@ -52,8 +52,7 @@
             headers: { 'Content-Type': 'application/json' },
             body: requestBody,
         });
-    
-      
+
         if (response.ok) {
             const result = response.json();
             if (result.role === 'admin') {

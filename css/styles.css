@@ -954,12 +954,8 @@ li:hover {
 }
 
 #cursos {
-  background-image: url(../img/landscape2.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
   height: 100%;
+  background-color: burlywood;
 }
 
 #grid {
@@ -1069,7 +1065,7 @@ li:hover {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  color: white;
+  color: black;
 }
 
 @media screen and (max-width: 320px) {
