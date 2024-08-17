@@ -6,39 +6,10 @@
   width: 100%;
 }
 
-#grid-body {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "titulo"
-    "productos"
-    "titulo2"
-    "acerca-denosotros"
-    "footer";
-  grid-template-columns: 1fr;
-  height: 100vh;
-}
-
-@media screen and (min-width: 576px) {
-  #grid-body {
-    display: grid;
-    grid-template-areas:
-      "header"
-      "titulo"
-      "productos"
-      "titulo2"
-      "acerca-denosotros"
-      "footer";
-    grid-template-columns: 1fr;
-    height: 100vh;
-  }
-}
-
 /* HEADER ---------------------------------------------------------------------------------------------------*/
 
 #contenedor {
   display: flex;
-  flex-direction: column;
   align-items: center;
   width: 100%;
   height: 350px;
@@ -59,14 +30,6 @@
 
 .logo2 {
   display: none;
-}
-
-@media screen and (min-width: 576px) {
-  #contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -93,10 +56,8 @@
 
 .menu__ul {
   display: flex;
-  gap: 3rem;
+  gap: 1.5rem;
   list-style: none;
-  justify-content: right;
-  margin-right: 50px;
   margin-top: 0;
 }
 
@@ -118,7 +79,7 @@ li:hover {
 }
 
 .titulo {
-  height: 100%;
+  height: 300px;
   background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.719)),
     url("../img/MeliYoga4.jpg");
   background-repeat: no-repeat;
@@ -147,9 +108,8 @@ li:hover {
 
 #menu-fixed {
   display: flex;
-  justify-content: center;
+  justify-content:space-evenly;
   flex-direction: row-reverse;
-  gap: 10rem;
   z-index: 1000;
   padding: 0;
   width: 100%;
@@ -241,13 +201,14 @@ li:hover {
 /* PRODUCTOS --------------------------------------------------------------------------------------------------*/
 
 #productos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 0%;
-  gap: 2rem;
-  margin-bottom: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   font-size: 1rem;
+}
+
+.productos {
+  gap: 3rem;
 }
 
 #productos .imagen {
@@ -278,13 +239,13 @@ li:hover {
   transition-timing-function: ease;
 }
 #productos .imagen .imagen__img1:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 #productos .imagen .imagen__img2:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 #productos .imagen .imagen__img3:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 #productos .imagen h2 {
   margin-bottom: 1rem;
@@ -295,32 +256,7 @@ li:hover {
   font-weight: 500;
 }
 
-@media screen and (max-width: 576px) {
-  #productos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    gap: 2rem;
-    margin-bottom: 4rem;
-    font-size: 1rem;
-  }
-}
 
-@media screen and (min-width: 768px) {
-  #productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-top: 4rem;
-    margin-bottom: 10rem;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
-    align-items: center;
-    height: 100%;
-  }
-}
 
 /* CARROUSEL IMÁGENES -----------------------------------------------------------------------------------------*/
 
@@ -338,14 +274,16 @@ li:hover {
 }
 
 .containersection {
+  height: 100%;
   background: #fff;
-  padding: 50px 0;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .container2 {
   max-width: 950px;
   margin: 0 auto;
-  padding: 0 20px;
+  
   margin-top: 4rem;
 }
 
@@ -641,13 +579,11 @@ li:hover {
 }
 
 /* ICONOS  --------------------------------------------------------------------------------------------------*/
+
 .iconos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-  height: 100%;
+
 }
+
 .iconos img {
   height: 50px;
   width: 50px;
@@ -655,30 +591,12 @@ li:hover {
 .iconos p {
   font-family: "Open Sans", sans-serif;
 }
-.iconos .iconos__contenido1,
-.iconos .iconos__contenido2,
-.iconos .iconos__contenido3,
-.iconos .iconos__contenido4,
-.iconos .iconos__contenido5 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: black;
-  align-content: center;
-  gap: 1.5rem;
-}
 
 .titulo2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  margin-top: 100px;
+  height: 350px;
   justify-content: center;
   font-family: "Rowdies", cursive;
   font-size: larger;
-  margin-bottom: 3rem;
   gap: 3rem;
   font-size: 1.3rem;
 }
@@ -692,152 +610,39 @@ li:hover {
   padding: 2rem;
   max-width: 100%;
   width: 100%;
-  margin: 0;
 }
 .titulo2 h1 {
   text-align: center;
 }
 
-@media screen and (min-width: 576px) {
-  .iconos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-    margin-bottom: 0;
-    height: 100%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .iconos {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 8rem;
-    height: 100%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .iconos {
-    display: grid;
-    grid-template-columns: repeat(2, 55%);
-    grid-template-rows: repeat(3, 100px);
-    grid-template-areas:
-      "iconos1 iconos2"
-      "iconos3 iconos4"
-      "iconos5 iconos5";
-    row-gap: 6rem;
-    column-gap: 8rem;
-    margin-bottom: 9rem;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
-  }
-  .iconos .iconos__contenido5 {
-    margin: 0 auto;
-  }
-  .titulo2 {
-    gap: 8rem;
-  }
-  .iconos__contenido1 {
-    grid-area: iconos1;
-  }
-  .iconos__contenido2 {
-    grid-area: iconos2;
-  }
-  .iconos__contenido3 {
-    grid-area: iconos3;
-  }
-  .iconos__contenido4 {
-    grid-area: iconos4;
-  }
-  .iconos__contenido5 {
-    grid-area: iconos5;
-  }
-}
 
 .titulo2__titulos__2 h1 {
   font-family: "DM Sans", sans-serif;
 }
 
 /* ACERCA DE NOSOTROS ---------------------------------------------------------------------------------------*/
-@media screen and (max-width: 620px) {
-  .acerca-denosotros__video iframe {
-    max-width: 100%;
-    height: 300px;
-    width: 450px;
-    border-radius: 10px;
-  }
-}
 
 #acerca-denosotros {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 6rem;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
   font-size: 1.3rem;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
-  background: 	#c9d3ce;
-}
-#acerca-denosotros .acerca-denosotros__texto {
-  text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
-  }
-
-#acerca-denosotros .acerca-denosotros__titulo {
-  text-align: center;
-  color: #bb493c;
-}
-#acerca-denosotros .acerca-denosotros__titulo {
-  grid-area: titulo3;
-}
-#acerca-denosotros .acerca-denosotros__texto {
-  grid-area: texto3;
-}
-#acerca-denosotros .acerca-denosotros__video {
-  grid-area: video3;
-}
-#acerca-denosotros .acerca-denosotros__video iframe {
-  max-width: 100%;
-  border-radius: 15px;
+  background:#e0cecc;
 }
 
-@media screen and (min-width: 576px) {
-  #acerca-denosotros {
-    height: 800px;
-    gap: 3rem;
-    margin-top: 3rem;
-    margin-bottom: 6rem;
-    font-size: 1.3rem;
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
+.acerca-denosotros {
+  display: flex;
 }
 
-@media screen and (min-width: 1024px) {
-  #acerca-denosotros {
-    display: grid;
-    grid-template-areas:
-      "titulo3 titulo3"
-      "texto3 video3";
-    grid-template-columns: 30%;
-    grid-template-rows: 50px 300px;
-    column-gap: 4rem;
-    row-gap: 4rem;
-    justify-content: center;
-    margin-bottom: 5rem;
-    height: 600px;
-  }
-  #acerca-denosotros .acerca-denosotros__titulo {
-    text-align: center;
-  }
+.acerca-denosotros__titulo {
+  margin-top: 1.5rem;
+}
+
+.newsletter {
+  width: 100%;
+  margin: 6rem;
 }
 
 #body-bio {
