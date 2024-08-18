@@ -67,15 +67,17 @@ document
         }
       })
       .then((result) => {
-        if (result.payload.role === "admin") {
-          alert("Admin login Correcto");
+        if (result.payload.role === "ADMIN") {
+          // alert("Admin login Correcto");
+          console.log('resultados backend',result.payload)
           loginForm.reset();
-          document.getElementById("login-container").classList.add("hidden");
-          uploadButton.classList.remove("hidden");
+          document.getElementById("loginModal").style.display="none";
+          uploadButton.style.display="block";
+          misCursos.style.display="block";
         } else if (result.payload.role === "USER") {
           alert("User login Correcto");
           loginForm.reset();
-          document.getElementById("login-container").classList.add("hidden");
+          document.getElementById("loginModal").style.display="none";
           misCursos.classList.add("enabled");
         } else {
           alert("Error ingreso");
