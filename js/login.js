@@ -1,84 +1,94 @@
 // LOGIN
 
-  function showLoginModal() {
-    document.getElementById("loginModal").style.display = "block";
-  }
-  
-  function hideLoginModal() {
-    document.getElementById("loginModal").style.display = "none";
-  }
-
-  function cerrarModal() {
-    const modal = document.getElementById("loginModal");
-    modal.style.display = "none";
-  }
-  
-  // Event listener for the login button in the header
-  const login = document.getElementById("logInputBtn");
-  login.addEventListener("click", function () {
-    showLoginModal();
-  });
-  
-  document.querySelector(".close").addEventListener("click", function () {
-    hideLoginModal();
-  });
-  
-  const modal = document.getElementById("loginModal");
-  window.onclick = function(event) {
-    if (event.target == modal) {
-        cerrarModal();
-    }
+function showLoginModal() {
+  document.getElementById("loginModal").style.display = "block";
 }
 
-  // Event listener for the cancel button within the modal
-  document.getElementById("cancelBtnLogin").addEventListener("click", function () {
-      hideLoginModal();
-    });
-  
-  // LOGIN 
-  document.getElementById("loginForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-  
-      let email = document.getElementById("username").value;
-      let password = document.getElementById("password").value;
-      const uploadButton = document.getElementById("cargasAdmin");
-      const misCursos = document.getElementById("cursos2");
+function hideLoginModal() {
+  document.getElementById("loginModal").style.display = "none";
+}
 
-      let requestBody = JSON.stringify({ email, password });
-  
-      try {
-        const response = fetch('http://localhost:8080/api/auth/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: requestBody,
-        });
+function cerrarModal() {
+  const modal = document.getElementById("loginModal");
+  modal.style.display = "none";
+}
+
+// Event listener for the login button in the header
+const login = document.getElementById("logInputBtn");
+login.addEventListener("click", function () {
+  showLoginModal();
+});
+
+document.querySelector(".close").addEventListener("click", function () {
+  hideLoginModal();
+});
+
+const modal = document.getElementById("loginModal");
+window.onclick = function (event) {
+  if (event.target == modal) {
+    cerrarModal();
+  }
+};
+
+// Event listener for the cancel button within the modal
+document
+  .getElementById("cancelBtnLogin")
+  .addEventListener("click", function () {
+    hideLoginModal();
+  });
+
+// LOGIN
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let email =  document.getElementById("p_username").value;
+    let password = document.getElementById("p_password").value;
+    const uploadButton = document.getElementById("p_cargasAdmin");
+    const misCursos = document.getElementById("cursos2");
+
+
+
+    let requestBody = JSON.stringify({ email, password });
+
+    fetch("http://localhost:8080/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: requestBody,
+    })
+      .then((response) => {
+        console.log(response);
 
         if (response.ok) {
-            const result = response.json();
-            if (result.role === 'admin') {
-                alert('Admin login successful');
-                loginForm.reset();
-                document.getElementById('login-container').classList.add('hidden');
-                uploadButton.classList.remove('hidden');
-            } else if (result.role === 'cliente') {
-                alert('Customer login successful');
-                loginForm.reset();
-                document.getElementById('login-container').classList.add('hidden');
-                misCursos.classList.add("enabled");
-            } else {
-                alert('Unknown role');
-            }
+          return response.json();
         } else {
-            alert('Invalid credentials');
+          throw new Error("Invalid credentials");
         }
-    } catch (error) {
-        console.error('Error during fetch operation:', error);
-        alert('An error occurred. Please try again.');
-    };
+      })
+      .then((result) => {
+        if (result.payload.role === "admin") {
+          alert("Admin login Correcto");
+          loginForm.reset();
+          document.getElementById("login-container").classList.add("hidden");
+          uploadButton.classList.remove("hidden");
+        } else if (result.payload.role === "USER") {
+          alert("User login Correcto");
+          loginForm.reset();
+          document.getElementById("login-container").classList.add("hidden");
+          misCursos.classList.add("enabled");
+        } else {
+          alert("Error ingreso");
+        }
+      })
+      .catch((error) => {
+        console.error("Error during fetch operation:", error);
+        alert(error.message || "An error occurred. Please try again.");
+      });
 
-uploadButton.addEventListener('click', () => {
-    uploadContainer.classList.toggle('hidden');
-});
+    uploadButton.addEventListener("click", () => {
+      uploadContainer.classList.toggle("hidden");
+    });
   });
 
 /*
