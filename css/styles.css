@@ -182,20 +182,12 @@ li:hover {
 
 /* LOGIN & SIGNUP ----------------------------------------------------------------------------------------------------------*/
 
-#cursos2 {
+#p_cursos2 {
   display: none;
 }
 
-#cursos2 .enabled {
-  display: block;
-}
-
-#cargasAdmin {
-  display: block;
-}
-
-#cargasAdmin .enabled {
-  display: block;
+#p_cargasAdmin {
+  display: none;
 }
 
 /* PRODUCTOS --------------------------------------------------------------------------------------------------*/
@@ -579,10 +571,6 @@ li:hover {
 }
 
 /* ICONOS  --------------------------------------------------------------------------------------------------*/
-
-.iconos {
-
-}
 
 .iconos img {
   height: 50px;

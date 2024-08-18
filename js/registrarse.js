@@ -13,7 +13,7 @@ function hideSignupModal() {
     showSignupModal();
   });
 
-  // REGISTER Formulario
+  // REGISTRARSE Formulario
   const regForm = document.getElementById("reg-form");
   regForm.addEventListener("click", function () {
     showSignupModal();
@@ -31,18 +31,11 @@ function hideSignupModal() {
   
   // Event listener for clicks outside of the modal to close it
   window.addEventListener("click", function (event) {
-    let modalRegister = document.getElementById("signUpModal");
+    let modalRegister = document.getElementById("signupModal");
     if (event.target == modalRegister) {
       hideSignupModal();
     }
   });
-  
-  // Event listener for the cancel button within the modal
-  document
-    .getElementById("cancelBtnSignup")
-    .addEventListener("click", function () {
-      hideSignupModal();
-    });
   
   // Event listener for the login form submission
   document
@@ -51,46 +44,56 @@ function hideSignupModal() {
       event.preventDefault(); // Prevent form submission
       
       // Información para mandarle a César y que guarde al usuario, para luego poder hacer el LOGIN.
-      let firstName = document.getElementById("nombre").value;
-      let lastName = document.getElementById("apellido").value;
-      let email = document.getElementById("email").value;
-      let password = document.getElementById("password").value;
-      let reingresePassword = document.getElementById(
-        "reingreseContraseña"
-      ).value;
-  
+      let firstName = document.getElementById("r_name").value;
+      let lastName = document.getElementById("r_lastName").value;
+      let email = document.getElementById("r_username").value;
+      let password = document.getElementById("r_password").value;
+      let reingresePassword = document.getElementById("r_confirmPassword").value;
+      let role = "USER";
+      let provider = "USER";
+
+      const uploadButton = document.getElementById("p_cargasAdmin");
+      const misCursos = document.getElementById("p_cursos2");
       // Construct the request body
-      let requestBody = JSON.stringify({ firstName, lastName, email, password });
+      let requestBody = JSON.stringify({ firstName, lastName, email, password, reingresePassword, role, provider});
   
       // Send the request to the server
       fetch("http://localhost:8080/api/auth/register", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: requestBody,
       })
         .then((response) => {
+          console.log(response);
           if (response.ok) {
             return response.json();
           } else {
-            throw new Error("Network response was not ok.");
+            throw new Error("Invalid credentials");
           }
         })
-        .then((data) => {
-          if (data.success) {
-            document.getElementById("message").textContent = "Login successful!";
-            hideSignupModal();
+        .then((result) => {
+          if (result.payload.role === "ADMIN") {
+            // alert("Admin login Correcto");
+            console.log('resultados backend',result.payload)
+            loginForm.reset();
+            document.getElementById("loginModal").style.display="none";
+            uploadButton.style.display="block";
+            misCursos.style.display="block";
+          } else if (result.payload.role === "USER") {
+            alert("User login Correcto");
+            loginForm.reset();
+            document.getElementById("signupModal").style.display="none";
+            misCursos.style.display="block";
           } else {
-            document.getElementById("message").textContent =
-              "Invalid username or password. Please try again.";
+            alert("Error ingreso");
           }
         })
         .catch((error) => {
-          console.error("There was a problem with the fetch operation:", error);
-          document.getElementById("message").textContent =
-            "There was a problem with the login process. Please try again later.";
+          console.error("Error during fetch operation:", error);
+          alert(error.message || "An error occurred. Please try again.");
         });
+  
+      uploadButton.addEventListener("click", () => {
+        uploadContainer.classList.toggle("hidden");
+      });
     });
-  
-  

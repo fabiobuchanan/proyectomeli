@@ -46,7 +46,7 @@ document
     let email =  document.getElementById("p_username").value;
     let password = document.getElementById("p_password").value;
     const uploadButton = document.getElementById("p_cargasAdmin");
-    const misCursos = document.getElementById("cursos2");
+    const misCursos = document.getElementById("p_cursos2");
 
 
 
@@ -78,7 +78,7 @@ document
           alert("User login Correcto");
           loginForm.reset();
           document.getElementById("loginModal").style.display="none";
-          misCursos.classList.add("enabled");
+          misCursos.style.display="block";
         } else {
           alert("Error ingreso");
         }
