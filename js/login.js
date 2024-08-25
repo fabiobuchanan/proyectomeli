@@ -30,6 +30,18 @@ window.onclick = function (event) {
   }
 };
 
+// Login dentro de Registrarse
+
+function hideSignupModal() {
+  document.getElementById("signupModal").style.display = "none";
+}
+
+const irALogin = document.getElementById("irALogin");
+  irALogin.addEventListener("click", function () {
+   showLoginModal();
+   hideSignupModal();
+  });
+
 // Event listener for the cancel button within the modal
 document
   .getElementById("cancelBtnLogin")

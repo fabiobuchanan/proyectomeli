@@ -1,6 +1,5 @@
 document.getElementById('videoForm').addEventListener('submit', (event) => {
     event.preventDefault();
-    const id = document.getElementById('videoId').value;
     const nombre = document.getElementById('nombre').value;
     const descripcion = document.getElementById('descripcion').value;
     const url = document.getElementById('url').value;
@@ -97,24 +96,3 @@ function loadVideos() {
     })
     .catch(error => console.error('Error cargando videos:', error));
 }
-
-
-
-
-
-
-/* document.getElementById('enviarSubir').addEventListener('click', () => {
-    // Realizar la solicitud POST al servidor para enviar el array de objetos
-    fetch('/save_videos', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(videoData)
-    })
-    .then(response => response.text())
-    .then(data => {
-        console.log('Respuesta del servidor:', data);
-    })
-    .catch(error => console.error('Error enviando videos:', error));
-});*/
