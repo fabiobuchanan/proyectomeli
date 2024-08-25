@@ -1,4 +1,6 @@
-import { Input, Ripple, initMDB } from "mdb-ui-kit";
 
-initMDB({ Input, Ripple });
-
+  // REGISTRARSE Formulario
+  const regForm = document.querySelector(".regForm");
+  regForm.addEventListener("click", function () {
+    showSignupModal();
+  });

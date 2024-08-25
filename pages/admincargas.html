@@ -115,7 +115,7 @@
               <hr>
   
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="on">
                 <label for="floatingPassword">Contraseña</label>
               </div>
   
@@ -147,33 +147,43 @@
   
   <!-- Registrarse -->
   
-  <div id="signupModal" class="modal">
+  <div id="signupModal" class="modal close">
     <div class="row">
-      <span class="close">&times;</span>
+      <span>&times;</span>
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
           <div class="card-img-left d-none d-md-flex">
-            <!-- Background image for card set in CSS! -->
           </div>
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Registrarse</h5>
             <form>
+  
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                <input type="text" class="form-control" id="r_name" placeholder="myusername" required autofocus>
+                <label for="floatingInputUsername">Nombre</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="r_lastName" placeholder="myusername" required autofocus>
+                <label for="floatingInputUsername">Apellido</label>
+              </div>
+  
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="r_username" placeholder="name@example.com">
                 <label for="floatingInputEmail">Dirección de correo</label>
               </div>
   
               <hr>
   
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" id="r_password" placeholder="Password" autocomplete="on">
                 <label for="floatingPassword">Contraseña</label>
               </div>
   
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password">
+               <div class="form-floating mb-3"> 
+                <input type="password" class="form-control" id="r_confirmPassword" placeholder="Confirm Password" autocomplete="on">
                 <label for="floatingPasswordConfirm">Confirmar Contraseña</label>
-              </div>
+              </div> 
   
               <div class="d-grid mb-2 reg-cancel">
                 <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Registrarse</button>
@@ -191,18 +201,13 @@
                 </button>
               </div>
   
-              <div class="d-grid">
-                <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
-                  <i class="fab fa-facebook-f me-2"></i> Registrarse con Facebook
-                </button>
-              </div>
-  
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 
   <h1>Gestión de Videos</h1>
   <form id="videoForm">

@@ -107,7 +107,7 @@
               <hr>
   
               <div id="password" class="form-floating mb-3 password">
-                <input type="password" class="form-control" id="p_password" placeholder="Password">
+                <input type="password" class="form-control" id="p_password" placeholder="Password" autocomplete="on">
                 <label for="floatingPassword">Contraseña</label>
               </div>
   
@@ -132,9 +132,9 @@
   
   <!-- Registrarse -->
   
-  <div id="signupModal" class="modal">
+  <div id="signupModal" class="modal close">
     <div class="row">
-      <span class="close">&times;</span>
+      <span>&times;</span>
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
           <div class="card-img-left d-none d-md-flex">
@@ -161,12 +161,12 @@
               <hr>
   
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="r_password" placeholder="Password">
+                <input type="password" class="form-control" id="r_password" placeholder="Password" autocomplete="on">
                 <label for="floatingPassword">Contraseña</label>
               </div>
   
                <div class="form-floating mb-3"> 
-                <input type="password" class="form-control" id="r_confirmPassword" placeholder="Confirm Password">
+                <input type="password" class="form-control" id="r_confirmPassword" placeholder="Confirm Password" autocomplete="on">
                 <label for="floatingPasswordConfirm">Confirmar Contraseña</label>
               </div> 
   
@@ -382,12 +382,12 @@
         </div>
       </div>
 
-<div id="acerca-denosotros" class="container justify-content-center"> 
+<div id="acerca-denosotros" class="container-fluid justify-content-center"> 
     <div class="row text-center">
       <div class="acerca-denosotros__titulo">
           <h1>Acerca de Melina Foster | Saber en Movimiento</h1>
       </div>
-      <div class="container">
+      <div>
       <div class="row align-items-center acerca-denosotros">
       <div class="col-lg-4 acerca-denosotros__texto">
           <p>Lorem, ipsum dolor sit <strong> amet consectetur adipisicing elit</strong>. Recusandae vero sit tenetur 
@@ -404,7 +404,7 @@
     </div>
   </div>
 
-  <div class="container newsletter">
+  <div class="container-fluid newsletter">
     <form action="" class="formSuscripcion"> 
         <div class="card-body card text-center">
           <form class="d-flex container align-self-center formulario-suscripcion">
@@ -460,7 +460,6 @@
   <script src="js/main.js"></script>
   <script src="js/login.js"></script>
   <script src="js/registrarse.js"></script>
-  <script src="js/suscribirse.js"></script>
 
 </body>
 </html>

@@ -12,12 +12,6 @@ function hideSignupModal() {
   signUp.addEventListener("click", function () {
     showSignupModal();
   });
-
-  // REGISTRARSE Formulario
-  const regForm = document.getElementById("reg-form");
-  regForm.addEventListener("click", function () {
-    showSignupModal();
-  });
   
   // Event listener for the close button within the modal
   document.querySelector(".close").addEventListener("click", function () {
@@ -39,7 +33,7 @@ function hideSignupModal() {
   
   // Event listener for the login form submission
   document
-    .getElementById("signUpForm")
+    .getElementById("signupModal")
     .addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent form submission
       
