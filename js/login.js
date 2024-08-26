@@ -59,8 +59,14 @@ document
     let password = document.getElementById("p_password").value;
     const uploadButton = document.getElementById("p_cargasAdmin");
     const misCursos = document.getElementById("p_cursos2");
-
-
+    // TOKEN USUARIO valido - guardar en localStorage.
+  /*  const token = localStorage.getItem('authToken');
+    if(token) {
+      console.log('Usuario autenticado');
+    } else {
+      window.location.href = "/index.html";
+    }
+*/
 
     let requestBody = JSON.stringify({ email, password });
 
@@ -83,12 +89,20 @@ document
           // alert("Admin login Correcto");
           console.log('resultados backend',result.payload)
           loginForm.reset();
+/*
+          localStorage.setItem('authTokem', data.token);
+          window.location.href = '/index.html';*/
+
           document.getElementById("loginModal").style.display="none";
           uploadButton.style.display="block";
           misCursos.style.display="block";
         } else if (result.payload.role === "USER") {
           alert("User login Correcto");
           loginForm.reset();
+
+       /*   localStorage.setItem('authTokem', data.token);
+          window.location.href = '/index.html';*/
+
           document.getElementById("loginModal").style.display="none";
           misCursos.style.display="block";
         } else {
