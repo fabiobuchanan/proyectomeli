@@ -51,8 +51,7 @@ document
 
 // LOGIN
 document
-  .getElementById("loginForm")
-  .addEventListener("submit", function (event) {
+  .getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
     let email =  document.getElementById("p_username").value;
@@ -70,7 +69,7 @@ document
 
     let requestBody = JSON.stringify({ email, password });
 
-    fetch("http://localhost:8080/api/auth/login", {
+  fetch("http://localhost:8080/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: requestBody,
@@ -86,18 +85,18 @@ document
       })
       .then((result) => {
         if (result.payload.role === "ADMIN") {
-          // alert("Admin login Correcto");
+          alert("Admin login Correcto");
           console.log('resultados backend',result.payload)
+          // Guardar el token en una cookie
+          setCookie("authToken", result.token, 1);  // 1 día de duración
           loginForm.reset();
-/*
-          localStorage.setItem('authTokem', data.token);
-          window.location.href = '/index.html';*/
 
           document.getElementById("loginModal").style.display="none";
           uploadButton.style.display="block";
           misCursos.style.display="block";
         } else if (result.payload.role === "USER") {
           alert("User login Correcto");
+          setCookie("authToken", result.token, 1);  // 1 día de duración
           loginForm.reset();
 
        /*   localStorage.setItem('authTokem', data.token);
@@ -119,34 +118,38 @@ document
     });
   });
 
-/*
-      fetch("http://localhost:8080/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: requestBody,
-      })
-        .then((response) => {
-          if (response.ok) {
-            user = response.user;
-          } else {
-            throw new Error("Network response was not ok.");
-          }
-        })
-        .then((data) => {
-          if (data.success) {
-            document.getElementById("message").textContent = "Login successful!";
-            hideLoginModal();
-          } else {
-            document.getElementById("message").textContent =
-              "Invalid username or password. Please try again.";
-          }
-        })
-        .catch((error) => {
-          console.error("There was a problem with the fetch operation:", error);
-          document.getElementById("message").textContent =
-            "There was a problem with the login process. Please try again later.";
-        });
-    }); 
-  */
+  // Función para establecer una cookie
+function setCookie(name, value, days) {
+  const d = new Date();
+  d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "expires=" + d.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Función para obtener el valor de una cookie
+function getCookie(name) {
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const cookiesArray = decodedCookie.split(';');
+  for (let i = 0; i < cookiesArray.length; i++) {
+      let cookie = cookiesArray[i].trim();
+      if (cookie.indexOf(name + "=") == 0) {
+          return cookie.substring(name.length + 1);
+      }
+  }
+  return "";
+}
+
+// Función para verificar la autenticación del usuario
+function checkAuth() {
+  const token = getCookie("authToken");
+  if (token) {
+      // Usuario autenticado, puedes mostrar la información correspondiente
+      console.log("Usuario autenticado con token:", token);
+  } else {
+      // Redirigir al usuario a la página de login si no está autenticado
+      window.location.href = "/login.html";
+  }
+}
+
+// Llamar a la función de verificación de autenticación cuando se cargue la página
+window.onload = checkAuth;
